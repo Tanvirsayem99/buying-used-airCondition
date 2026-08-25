@@ -434,7 +434,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       badge: "#1 Used AC Buyer in Qatif, Dammam & Al Khobar",
       title: "We Buy Used Air Conditioners at Best Cash Prices in",
       titleHighlight: "Qatif, Dammam & Al Khobar",
-      subtitle: "We purchase all types of Split ACs, Window ACs, Central ACs & Home Appliances across Qatif, Dammam, and Al Khobar. Instant spot cash payment with 100% FREE dismantling and pickup!",
+      subtitle: "We purchase all types of Split ACs, Window ACs, Central ACs & Home Appliances across Qatif, Dammam, and Al Khobar.",
       callBtn: "Call Us Now",
       whatsappBtn: "Send Photos via WhatsApp",
       instantCash: "Instant Cash Payment",
