@@ -23,18 +23,18 @@ export const WhatsAppChatPopup: React.FC<WhatsAppChatPopupProps> = ({
 
   // Set localized defaults
   const isRtl = lang === "ar";
-  const name = businessName || (isRtl ? "شراء مكيفات مستعمل القطيف" : "Qatif Used AC Buyer");
+  const name = businessName || (isRtl ? "شراء مكيفات مستعمل (القطيف - الدمام - الخبر)" : "Qatif, Dammam & Khobar AC Buyer");
   const initialInput =
     defaultMessage ||
     (isRtl
-      ? "مرحباً، أريد بيع مكيف مستعمل في القطيف وأود الحصول على تسعير فوري."
-      : "Hello, I want to sell a used AC in Qatif and would like an instant quote.");
+      ? "مرحباً، أريد بيع مكيف مستعمل في القطيف / الدمام / الخبر وأود الحصول على تسعير فوري."
+      : "Hello, I want to sell a used AC in Qatif / Dammam / Al Khobar and would like an instant quote.");
 
   const greeting =
     greetingMessage ||
     (isRtl
-      ? "أهلاً بك في شراء مكيفات مستعمل القطيف! 👋\nنحن متواجدون الآن لتخمين وتسعير مكيفاتك وأجهزتك المستعملة بأعلى سعر كاش في القطيف وتاروت وسيهات.\n\nكيف يمكننا مساعدتك اليوم؟"
-      : "Welcome to Qatif Used AC Buyer! 👋\nWe are online to evaluate and buy your used ACs & appliances at the best spot cash prices in Qatif.\n\nHow can we help you today?");
+      ? "أهلاً بك معنا! 👋\nنحن متواجدون الآن لتخمين وتسعير مكيفاتك وأجهزتك المستعملة بأعلى سعر كاش في القطيف، الدمام، والخبر.\n\nكيف يمكننا مساعدتك اليوم؟"
+      : "Welcome! 👋\nWe are online to evaluate and buy your used ACs & appliances at the best spot cash prices in Qatif, Dammam, and Al Khobar.\n\nHow can we help you today?");
 
   const [message, setMessage] = useState<string>(initialInput);
 
@@ -70,12 +70,12 @@ export const WhatsAppChatPopup: React.FC<WhatsAppChatPopupProps> = ({
 
               {/* Business Title & Online Status */}
               <div className="flex flex-col">
-                <span className="font-extrabold text-sm sm:text-base leading-tight text-white flex items-center gap-1">
+                <span className="font-extrabold text-xs sm:text-sm leading-tight text-white flex items-center gap-1">
                   {name}
                 </span>
-                <span className="text-xs text-emerald-200 font-medium flex items-center gap-1.5 mt-0.5">
+                <span className="text-[11px] text-emerald-200 font-medium flex items-center gap-1.5 mt-0.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
-                  {isRtl ? "متصل الآن • خدمة فك ونقل مجاني" : "Online • 24/7 Fast Response"}
+                  {isRtl ? "القطيف • الدمام • الخبر • خدمة 24/7" : "Qatif • Dammam • Khobar • 24/7"}
                 </span>
               </div>
             </div>

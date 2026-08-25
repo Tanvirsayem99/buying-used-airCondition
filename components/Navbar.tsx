@@ -41,7 +41,7 @@ export const Navbar = () => {
               </span>
               <span className="text-xs text-cyan-700 font-semibold flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-cyan-600" />
-                {lang === "ar" ? "القطيف • تاروت • سيهات • صفوى" : "Qatif • Tarout • Saihat • Safwa"}
+                {lang === "ar" ? "القطيف • الدمام • الخبر" : "Qatif • Dammam • Al Khobar"}
               </span>
             </div>
           </a>
