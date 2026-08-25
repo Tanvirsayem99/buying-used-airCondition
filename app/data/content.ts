@@ -172,10 +172,10 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       whatsappUs: "تواصل واتساب",
     },
     hero: {
-      badge: "الخدمة الأولى لشراء المكيفات في القطيف، الدمام، والخبر",
+      badge: "الخدمة الأولى لشراء المكيفات في القطيف والدمام والخبر",
       title: "شراء مكيفات مستعملة بأعلى الأسعار في",
       titleHighlight: "القطيف والدمام والخبر",
-      subtitle: "نشتري جميع أنواع المكيفات (سبليت، شباك، مركزي) والأجهزة الكهربائية المستعملة في القطيف، الدمام، والخبر. دفع نقدي فوراً في الموقع مع خدمة الفك والنقل المباشر المجاني!",
+      subtitle: "نشتري جميع أنواع المكيفات (سبليت، شباك، مركزي) والأجهزة الكهربائية المستعملة في القطيف والدمام والخبر. دفع نقدي فوراً في الموقع مع خدمة الفك والنقل المباشر المجاني!",
       callBtn: "اتصل بنا الآن",
       whatsappBtn: "أرسل الصور عبر الواتساب",
       instantCash: "دفع نقدي فوري",
@@ -216,7 +216,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
     },
     services: {
       title: "خدماتنا المميزة في شراء المستعمل",
-      subtitle: "نغطي كافة احتیاجاتك لشراء الأجهزة الكهرومنزلية والمكيفات بجميع أنواعها وحالاتها في القطيف، الدمام، والخبر.",
+      subtitle: "نغطي كافة احتیاجاتك لشراء الأجهزة الكهرومنزلية والمكيفات بجميع أنواعها وحالاتها في القطيف والدمام والخبر.",
       items: [
         {
           id: "split-ac",
@@ -273,7 +273,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       subtitle: "نضمن لك تجربة بيع سهلة، مريحة، ومربحة مع أعلى درجات المصداقية والسرعة في القطيف والدمام والخبر.",
       cards: [
         {
-          title: "أعلى سعر في القطيف، الدمام، والخبر",
+          title: "أعلى سعر في القطيف والدمام والخبر",
           description: "نقدم أفضل تقييم مالي عادل لمكيفك وأجهزتك المستعملة مقارنة بالسوق المحلي دون بخس للأسعار.",
           icon: "DollarSign",
         },
@@ -289,7 +289,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
         },
         {
           title: "سرعة الاستجابة ووصول فوري",
-          description: "نصل إليك في أي مكان في القطيف، الدمام، الخبر، سيهات، وتاروت خلال 30 إلى 60 دقيقة فقط من اتصالك.",
+          description: "نصل إليك في أي مكان في القطيف والدمام والخبر خلال 30 إلى 60 دقيقة فقط من اتصالك.",
           icon: "Clock",
         },
         {
@@ -329,18 +329,13 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       ],
     },
     coverage: {
-      title: "مناطق تغطية الخدمة في القطيف، الدمام، والخبر",
-      subtitle: "نصل إليك أينما كنت في القطيف، الدمام، الخبر، وجميع المدن والمناطق المجاورة لها بنفس السرعة والخدمة الممتازة.",
-      badge: "تغطية شاملة: القطيف • الدمام • الخبر",
+      title: "مناطق تغطية الخدمة الفورية",
+      subtitle: "نصل إليك أينما كنت في القطيف والدمام والخبر بنفس السرعة والخدمة الممتازة.",
+      badge: "القطيف • الدمام • الخبر",
       cities: [
-        { name: "مدينة القطيف (المجيدية، الشاطئ، الناصرة، المزروع)", main: true },
+        { name: "مدينة القطيف (كافة الأحياء والمناطق)", main: true },
         { name: "مدينة الدمام (كافة الأحياء والمناطق)", main: true },
-        { name: "مدينة الخبر والظهران (كافة الأحياء)", main: true },
-        { name: "جزيرة تاروت والربيعية والسنابس", main: true },
-        { name: "سيهات وأحياء الكوثر والمنتزه", main: true },
-        { name: "صفوى وأم الساهك", main: true },
-        { name: "عنك والجش والملاحة", main: true },
-        { name: "الأوجام والقديح والبحاري", main: true },
+        { name: "مدينة الخبر (كافة الأحياء والمناطق)", main: true },
       ],
     },
     testimonials: {
@@ -358,7 +353,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
         {
           name: "سعود الدوسري",
           location: "الدمام - حي الشاطئ",
-          comment: "أفضل سعر حصلت عليه في الدمام والشرقية لمكيفات كاسيت وسبليت. وصلوا في الموعد بالضبط والفك مجاني بدون تكاليف إضافية.",
+          comment: "أفضل سعر حصلت عليه في الدمام لمكيفات كاسيت وسبليت. وصلوا في الموعد بالضبط والفك مجاني بدون تكاليف إضافية.",
           rating: 5,
           date: "منذ 3 أيام",
           itemSold: "بيع 5 مكيفات سبليت",
@@ -387,7 +382,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
         },
         {
           q: "كم يستغرق وصول الفريق إلى منزلي في القطيف أو الدمام أو الخبر؟",
-          a: "نصل إليك في غضون 30 إلى 60 دقيقة فقط من تأكيد الطلب في القطيف، الدمام، الخبر، تاروت، وسيهات.",
+          a: "نصل إليك في غضون 30 إلى 60 دقيقة فقط من تأكيد الطلب في القطيف والدمام والخبر.",
         },
         {
           q: "كيف يتم تحديد سعر المكيف المستعمل؟",
@@ -410,16 +405,16 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       whatsappUs: "أرسل الصور على الواتساب",
     },
     footer: {
-      aboutTitle: "شراء مكيفات مستعمل القطيف والشرقية",
-      aboutDesc: "المؤسسة الرائدة في شراء وتثمين جميع أنواع المكيفات والأجهزة الكهربائية المستعملة في القطيف، الدمام، الخبر، والمنطقة الشرقية بأعلى الأسعار ودفع نقدي فوري.",
+      aboutTitle: "شراء مكيفات مستعمل (القطيف - الدمام - الخبر)",
+      aboutDesc: "المؤسسة الرائدة في شراء وتثمين جميع أنواع المكيفات والأجهزة الكهربائية المستعملة في القطيف، الدمام، والخبر بأعلى الأسعار ودفع نقدي فوري.",
       quickLinks: "روابط سريعة",
       servicesTitle: "خدماتنا الرئيسية",
       contactTitle: "معلومات التواصل",
       phoneLabel: "الهاتف / الاتصال المباشر:",
       whatsappLabel: "محادثة الواتساب المباشرة:",
-      locationLabel: "مناطق التغطية: القطيف، الدمام، الخبر، تاروت، سيهات، صفوى",
+      locationLabel: "مناطق التغطية: القطيف، الدمام، الخبر",
       hoursLabel: "ساعات العمل: 24/7 طوال أيام الأسبوع",
-      rights: "جميع الحقوق محفوظة © 2026 شراء مكيفات مستعمل القطيف والدمام والخبر.",
+      rights: "جميع الحقوق محفوظة © 2026 شراء مكيفات مستعمل (القطيف - الدمام - الخبر).",
     },
   },
   en: {
@@ -553,7 +548,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
         },
         {
           title: "Rapid 30-Min Arrival",
-          description: "Fast response across Qatif, Dammam, Al Khobar, Saihat, Tarout, and Safwa within 30 to 60 minutes.",
+          description: "Fast response across Qatif, Dammam, and Al Khobar within 30 to 60 minutes.",
           icon: "Clock",
         },
         {
@@ -594,17 +589,12 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
     },
     coverage: {
       title: "Service Areas: Qatif, Dammam & Al Khobar",
-      subtitle: "We reach you anywhere across Qatif, Dammam, Al Khobar, and surrounding cities with equal speed and quality.",
+      subtitle: "We reach you anywhere across Qatif, Dammam, and Al Khobar with equal speed and quality.",
       badge: "Coverage: Qatif • Dammam • Al Khobar",
       cities: [
-        { name: "Qatif City (Al-Majidiya, Al-Shati, Al-Nasrah, Al-Mazrou)", main: true },
+        { name: "Qatif City (All Districts & Areas)", main: true },
         { name: "Dammam City (All Districts & Areas)", main: true },
-        { name: "Al Khobar & Dhahran (All Districts)", main: true },
-        { name: "Tarout Island, Al-Rabieah & Sanabis", main: true },
-        { name: "Saihat, Al-Kawthar & Al-Muntazah", main: true },
-        { name: "Safwa & Um Al-Sahak", main: true },
-        { name: "Anak, Al-Jash & Al-Malaha", main: true },
-        { name: "Al-Ajam, Al-Qudaih & Al-Buhairi", main: true },
+        { name: "Al Khobar City (All Districts & Areas)", main: true },
       ],
     },
     testimonials: {
@@ -651,7 +641,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
         },
         {
           q: "How fast can your team reach my location in Qatif, Dammam, or Al Khobar?",
-          a: "We arrive within 30 to 60 minutes of order confirmation anywhere in Qatif, Dammam, Al Khobar, Tarout, or Saihat.",
+          a: "We arrive within 30 to 60 minutes of order confirmation anywhere in Qatif, Dammam, or Al Khobar.",
         },
         {
           q: "How is the used AC price calculated?",
@@ -675,13 +665,13 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
     },
     footer: {
       aboutTitle: "Qatif, Dammam & Al Khobar Used AC Buyer",
-      aboutDesc: "The leading buyer and evaluator of all types of used air conditioners and home appliances in Qatif, Dammam, Al Khobar & Eastern Province at highest market rates.",
+      aboutDesc: "The leading buyer and evaluator of all types of used air conditioners and home appliances in Qatif, Dammam, and Al Khobar at highest market rates.",
       quickLinks: "Quick Links",
       servicesTitle: "Main Services",
       contactTitle: "Contact Info",
       phoneLabel: "Phone / Direct Call:",
       whatsappLabel: "Direct WhatsApp:",
-      locationLabel: "Coverage: Qatif, Dammam, Al Khobar, Tarout, Saihat, Safwa",
+      locationLabel: "Coverage: Qatif, Dammam, Al Khobar",
       hoursLabel: "Working Hours: 24/7 Everyday",
       rights: "All rights reserved © 2026 Qatif, Dammam & Al Khobar Used AC Buyer.",
     },
