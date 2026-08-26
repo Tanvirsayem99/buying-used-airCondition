@@ -1,20 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
 export const FAQSection = () => {
   const { lang, t } = useLanguage();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-[#f8fafc] via-cyan-50/20 to-[#f8fafc] relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 bg-gradient-to-b from-[#f8fafc] via-cyan-50/20 to-[#f8fafc] relative text-slate-900 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
@@ -22,7 +17,7 @@ export const FAQSection = () => {
             <HelpCircle className="w-4 h-4 text-cyan-600" />
             <span>{t.faq.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             {lang === "ar" ? "كل ما تريد معرفته قبل البيع" : "Everything You Need to Know"}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium">
@@ -30,33 +25,26 @@ export const FAQSection = () => {
           </p>
         </div>
 
-        {/* Accordions */}
+        {/* Native Accordions */}
         <div className="space-y-4">
-          {t.faq.questions.map((faq, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all"
-              >
-                <button
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full p-6 text-start flex items-center justify-between gap-4 font-black text-base sm:text-lg text-slate-900 hover:text-cyan-700 transition-colors"
-                >
-                  <span>{faq.q}</span>
-                  <div className={`p-2 rounded-xl border shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 bg-cyan-100 border-cyan-200 text-cyan-700" : "bg-slate-50 border-slate-200 text-slate-500"}`}>
-                    <ChevronDown className="w-5 h-5" />
-                  </div>
-                </button>
+          {t.faq.questions.map((faq, idx) => (
+            <details
+              key={idx}
+              open={idx === 0}
+              className="group bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-300 [&[open]]:shadow-md"
+            >
+              <summary className="w-full p-6 cursor-pointer list-none text-start flex items-center justify-between gap-4 font-black text-base sm:text-lg text-slate-900 hover:text-cyan-700 transition-colors select-none">
+                <span>{faq.q}</span>
+                <div className="p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-500 shrink-0 group-open:rotate-180 group-open:bg-cyan-100 group-open:border-cyan-200 group-open:text-cyan-700 transition-transform duration-300">
+                  <ChevronDown className="w-5 h-5" />
+                </div>
+              </summary>
 
-                {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-slate-100 pt-4">
-                    {faq.a}
-                  </div>
-                )}
+              <div className="px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-slate-100 pt-4">
+                {faq.a}
               </div>
-            );
-          })}
+            </details>
+          ))}
         </div>
 
       </div>

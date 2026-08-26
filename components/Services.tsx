@@ -3,7 +3,8 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { WHATSAPP_NUMBER, getWhatsAppUrl } from "@/app/data/content";
-import { Wind, Grid, Server, Refrigerator, Armchair, Truck, Check, MessageSquare, ArrowRight, ArrowLeft } from "lucide-react";
+import { Wind, Grid, Server, Refrigerator, Armchair, Truck, Check, ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export const Services = () => {
   const { lang, t } = useLanguage();
@@ -28,15 +29,16 @@ export const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-[#f8fafc] relative">
+    <section id="services" className="py-20 bg-[#f8fafc] relative text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100/80 border border-cyan-200 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-cyan-600" />
             <span>{lang === "ar" ? "خدمات متكاملة" : "Our Services"}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             {t.services.title}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium">
@@ -62,7 +64,7 @@ export const Services = () => {
                   <div className="w-14 h-14 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center group-hover:scale-110 transition-transform">
                     {renderIcon(service.icon)}
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-cyan-100/80 border border-cyan-200 text-cyan-800 text-xs font-bold">
+                  <span className="px-3.5 py-1 rounded-full bg-cyan-100/80 border border-cyan-200 text-cyan-800 text-xs font-bold">
                     {service.badge}
                   </span>
                 </div>
@@ -94,7 +96,7 @@ export const Services = () => {
                   rel="noopener noreferrer"
                   className="w-full mt-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-emerald-600 border border-slate-200 hover:border-emerald-500 text-slate-800 hover:text-white font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-xs group-hover:shadow-emerald-600/20"
                 >
-                  <MessageSquare className="w-4 h-4 text-emerald-600 group-hover:text-white" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-600 group-hover:text-white" />
                   <span>{lang === "ar" ? "اطلب تقييم الخدمة" : "Request Evaluation"}</span>
                   {lang === "ar" ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                 </a>

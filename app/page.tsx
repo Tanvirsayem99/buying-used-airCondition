@@ -1,10 +1,11 @@
-"use client";
+
 
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ValuationCalculator } from "@/components/ValuationCalculator";
 import { Services } from "@/components/Services";
+import { ScrapMetalSection } from "@/components/ScrapMetalSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CoverageAreas } from "@/components/CoverageAreas";
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ValuationCalculator />
+      <ScrapMetalSection />
       <Services />
       <WhyChooseUs />
       <HowItWorks />

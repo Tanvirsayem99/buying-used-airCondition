@@ -2,6 +2,7 @@ export interface ContentType {
   nav: {
     home: string;
     services: string;
+    scrapMetals: string;
     whyUs: string;
     howItWorks: string;
     coverage: string;
@@ -53,6 +54,21 @@ export interface ContentType {
       features: string[];
       badge: string;
       icon: string;
+    }[];
+  };
+  scrapMetals: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    requestBtn: string;
+    items: {
+      id: string;
+      title: string;
+      description: string;
+      image: string;
+      icon: string;
+      badge: string;
+      whatsappMessage: string;
     }[];
   };
   whyUs: {
@@ -162,6 +178,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
     nav: {
       home: "الرئيسية",
       services: "خدماتنا",
+      scrapMetals: "أنواع السكراب",
       whyUs: "لماذا نحن",
       howItWorks: "كيف نعمل",
       coverage: "مناطق الخدمة",
@@ -265,6 +282,68 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
           features: ["فنيين متخصصين في فك التكييف", "نقل آمن وسريع بنفس اليوم", "0 ريال تكاليف إضافية عليك"],
           badge: "100% مجاناً",
           icon: "Truck",
+        },
+      ],
+    },
+    scrapMetals: {
+      badge: "أسعار تنافسية ودفع كاش",
+      title: "أنواع سكراب المعادن التي نشتريها",
+      subtitle: "نشتري كافة أنواع سكراب المعادن بجميع كمياتها بأعلى سعر للكيلو في القطيف والدمام والخبر مع خدمة الفك والتحميل والنقل المجاني.",
+      requestBtn: "طلب عبر الواتساب",
+      items: [
+        {
+          id: "cables",
+          title: "سكراب كابلات وأسلاك كهربائية",
+          description: "نشتري كابلات النحاس والألمنيوم، أسلاك التمديدات المنزلية، الكابلات الكهربائية وسكراب الأسلاك الصناعية بأعلى الأسعار.",
+          image: "/images/scrap-cables.jpg",
+          icon: "Zap",
+          badge: "نحاس وألمنيوم",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب كابلات وأسلاك كهربائية. أرجو التواصل وإرسال أفضل تسعيرة.",
+        },
+        {
+          id: "battery",
+          title: "سكراب بطاريات",
+          description: "نشتري كافة أنواع بطاريات السيارات المستعملة، بطاريات الرصاص، بطاريات يو بي إس (UPS) وسكراب البطاريات الصناعية.",
+          image: "/images/scrap-battery.jpg",
+          icon: "BatteryCharging",
+          badge: "بطاريات سيارات وصناعية",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب بطاريات. أرجو التواصل وإرسال أفضل تسعيرة.",
+        },
+        {
+          id: "ac-scrap",
+          title: "سكراب مكيفات",
+          description: "نشتري مكيفات السكراب المستعملة، العطلانة والتالفة (سبليت، شباك، مركزي، شيلر) بغرض إعادة التدوير بأعلى تقييم.",
+          image: "/images/scrap-ac.jpg",
+          icon: "Wind",
+          badge: "جميع أنواع المكيفات",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب مكيفات عطلانة وتالفة. أرجو التواصل وإرسال أفضل تسعيرة.",
+        },
+        {
+          id: "copper",
+          title: "سكراب نحاس",
+          description: "أعلى أسعار التقييم لسكراب النحاس الأحمر والأصفر، مواسير النحاس، الأنابيب والقطع النحاسية بكافة أحجامها.",
+          image: "/images/scrap-copper.jpg",
+          icon: "Flame",
+          badge: "نحاس أحمر وأصفر",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب نحاس. أرجو التواصل وإرسال أفضل تسعيرة.",
+        },
+        {
+          id: "aluminum",
+          title: "سكراب ألمنيوم",
+          description: "نشتري سكراب الألمنيوم، قطاعات المطابخ والنوافذ، ألواح الألمنيوم، وسكراب الورش والمصانع والكميات الكبيرة.",
+          image: "/images/scrap-aluminum.jpg",
+          icon: "Layers",
+          badge: "مطابخ ونوافذ وقطاعات",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب ألمنيوم. أرجو التواصل وإرسال أفضل تسعيرة.",
+        },
+        {
+          id: "iron-steel",
+          title: "سكراب حديد وصلب",
+          description: "نشتري سكراب الحديد، حديد التسليح، الهياكل المعدنية، مخلفات البناء والمشروعات والأجهزة الثقيلة.",
+          image: "/images/scrap-iron-steel.jpg",
+          icon: "Hammer",
+          badge: "حديد تسليح وهياكل",
+          whatsappMessage: "السلام عليكم، أرغب في بيع سكراب حديد وصلب. أرجو التواصل وإرسال أفضل تسعيرة.",
         },
       ],
     },
@@ -421,6 +500,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
     nav: {
       home: "Home",
       services: "Services",
+      scrapMetals: "Scrap Metals",
       whyUs: "Why Choose Us",
       howItWorks: "How It Works",
       coverage: "Service Areas",
@@ -524,6 +604,68 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
           features: ["Certified AC removal technicians", "Same-day fast arrival", "0 SAR hidden charges"],
           badge: "100% Free",
           icon: "Truck",
+        },
+      ],
+    },
+    scrapMetals: {
+      badge: "Top Cash Prices for Metals",
+      title: "Types of Scrap Metal We Buy",
+      subtitle: "We offer top market rates for all categories of scrap metal in Qatif, Dammam, and Al Khobar with free pickup and spot cash payment.",
+      requestBtn: "Request on WhatsApp",
+      items: [
+        {
+          id: "cables",
+          title: "Scrap Cables and Electrical Wires",
+          description: "We buy copper and aluminum electrical cables, house wiring, power cables, and industrial wire scrap at top market rates.",
+          image: "/images/scrap-cables.jpg",
+          icon: "Zap",
+          badge: "Copper & Aluminum",
+          whatsappMessage: "Hello, I want to sell scrap cables and electrical wires in Qatif/Dammam/Khobar. Please provide a price quote.",
+        },
+        {
+          id: "battery",
+          title: "Battery Scrap",
+          description: "We purchase all types of scrap lead-acid batteries, car batteries, UPS batteries, and industrial scrap batteries.",
+          image: "/images/scrap-battery.jpg",
+          icon: "BatteryCharging",
+          badge: "Auto & Industrial",
+          whatsappMessage: "Hello, I want to sell scrap batteries in Qatif/Dammam/Khobar. Please provide a price quote.",
+        },
+        {
+          id: "ac-scrap",
+          title: "Air Conditioner Scrap",
+          description: "We buy old, broken, non-working, and scrap AC units (Split, Window, Central, Chillers) for recycling at highest cash value.",
+          image: "/images/scrap-ac.jpg",
+          icon: "Wind",
+          badge: "Split, Window & Central",
+          whatsappMessage: "Hello, I want to sell scrap air conditioner units in Qatif/Dammam/Khobar. Please provide a price quote.",
+        },
+        {
+          id: "copper",
+          title: "Copper Scrap",
+          description: "Highest market rates for bare bright copper wire, copper pipes, tubing, heavy copper, and brass fittings.",
+          image: "/images/scrap-copper.jpg",
+          icon: "Flame",
+          badge: "Red & Yellow Copper",
+          whatsappMessage: "Hello, I want to sell copper scrap in Qatif/Dammam/Khobar. Please provide a price quote.",
+        },
+        {
+          id: "aluminum",
+          title: "Aluminum Scrap",
+          description: "We buy aluminum window frames, kitchen extrusions, aluminum sheets, cast aluminum, alloy wheels, and industrial scrap.",
+          image: "/images/scrap-aluminum.jpg",
+          icon: "Layers",
+          badge: "Frames & Sheets",
+          whatsappMessage: "Hello, I want to sell aluminum scrap in Qatif/Dammam/Khobar. Please provide a price quote.",
+        },
+        {
+          id: "iron-steel",
+          title: "Scrap Iron and Steel",
+          description: "Bulk recycling of structural steel, rebar, iron plates, heavy machinery scrap, building clearance, and demolition metal.",
+          image: "/images/scrap-iron-steel.jpg",
+          icon: "Hammer",
+          badge: "Rebar & Structural",
+          whatsappMessage: "Hello, I want to sell scrap iron and steel in Qatif/Dammam/Khobar. Please provide a price quote.",
         },
       ],
     },

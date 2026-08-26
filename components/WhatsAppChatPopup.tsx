@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageSquare, X, Send, CheckCheck, Snowflake } from "lucide-react";
+import { X, Send, CheckCheck, Snowflake } from "lucide-react";
 import { getWhatsAppUrl, WHATSAPP_NUMBER } from "@/app/data/content";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export interface WhatsAppChatPopupProps {
   phoneNumber?: string;
@@ -147,7 +148,7 @@ export const WhatsAppChatPopup: React.FC<WhatsAppChatPopupProps> = ({
         {isOpen ? (
           <X className="w-7 h-7 stroke-[2.5]" />
         ) : (
-          <MessageSquare className="w-7 h-7 fill-white stroke-none" />
+          <WhatsAppIcon className="w-7 h-7 text-white" />
         )}
       </button>
     </div>

@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { WHATSAPP_NUMBER, getWhatsAppUrl } from "@/app/data/content";
-import { Wind, Grid, Server, Box, RefreshCw, Armchair, Calculator, MessageSquare, Plus, Minus, Sparkles } from "lucide-react";
+import { Wind, Grid, Server, Box, RefreshCw, Armchair, Calculator, Plus, Minus, Sparkles, ShieldCheck } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export const ValuationCalculator = () => {
   const { lang, t } = useLanguage();
@@ -52,22 +53,23 @@ export const ValuationCalculator = () => {
     return `${minTotal} - ${maxTotal} ${lang === "ar" ? "ريال سعودي" : "SAR"}`;
   };
 
-  const renderIcon = (iconName: string) => {
+  const renderIcon = (iconName: string, isSelected: boolean) => {
+    const colorClass = isSelected ? "text-cyan-600" : "text-slate-600";
     switch (iconName) {
       case "Wind":
-        return <Wind className="w-6 h-6 text-cyan-600" />;
+        return <Wind className={`w-6 h-6 ${colorClass}`} />;
       case "Grid":
-        return <Grid className="w-6 h-6 text-blue-600" />;
+        return <Grid className={`w-6 h-6 ${colorClass}`} />;
       case "Server":
-        return <Server className="w-6 h-6 text-sky-600" />;
+        return <Server className={`w-6 h-6 ${colorClass}`} />;
       case "Box":
-        return <Box className="w-6 h-6 text-indigo-600" />;
+        return <Box className={`w-6 h-6 ${colorClass}`} />;
       case "RefreshCw":
-        return <RefreshCw className="w-6 h-6 text-emerald-600" />;
+        return <RefreshCw className={`w-6 h-6 ${colorClass}`} />;
       case "Armchair":
-        return <Armchair className="w-6 h-6 text-amber-600" />;
+        return <Armchair className={`w-6 h-6 ${colorClass}`} />;
       default:
-        return <Wind className="w-6 h-6 text-cyan-600" />;
+        return <Wind className={`w-6 h-6 ${colorClass}`} />;
     }
   };
 
@@ -83,20 +85,20 @@ export const ValuationCalculator = () => {
   };
 
   return (
-    <section id="calculator" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="calculator" className="py-20 bg-slate-50 relative overflow-hidden text-slate-900">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-200/40 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/40 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100/80 border border-cyan-200 text-cyan-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100/90 border border-cyan-200 text-cyan-900 text-xs font-black uppercase tracking-wider">
             <Calculator className="w-4 h-4 text-cyan-600" />
             <span>{t.calculator.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             {lang === "ar" ? "احسب القيمة التقديرية لمكيفك في ثوانٍ" : "Estimate Your AC Value in Seconds"}
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium">
@@ -109,7 +111,7 @@ export const ValuationCalculator = () => {
           
           {/* Step 1: Select Item Type */}
           <div className="space-y-4 mb-8">
-            <label className="block text-sm sm:text-base font-bold text-slate-900 flex items-center gap-2">
+            <label className="block text-sm sm:text-base font-black text-slate-900 flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-cyan-600" />
               <span>{t.calculator.step1Label}</span>
             </label>
@@ -127,8 +129,8 @@ export const ValuationCalculator = () => {
                         : "bg-slate-50 border-slate-200/80 hover:border-slate-300 hover:bg-slate-100 text-slate-700"
                     }`}
                   >
-                    <div className="mb-2.5 p-2 rounded-xl bg-white shadow-xs">
-                      {renderIcon(type.icon)}
+                    <div className={`mb-2.5 p-2 rounded-xl ${isSelected ? "bg-white shadow-xs" : "bg-slate-100"}`}>
+                      {renderIcon(type.icon, isSelected)}
                     </div>
                     <span className={`text-xs sm:text-sm font-extrabold ${isSelected ? "text-cyan-900" : "text-slate-800"}`}>
                       {type.name}
@@ -141,8 +143,8 @@ export const ValuationCalculator = () => {
 
           {/* Step 2: Select Item Condition */}
           <div className="space-y-4 mb-8">
-            <label className="block text-sm sm:text-base font-bold text-slate-900 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-cyan-600" />
+            <label className="block text-sm sm:text-base font-black text-slate-900 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>{t.calculator.step2Label}</span>
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -191,7 +193,7 @@ export const ValuationCalculator = () => {
           </div>
 
           {/* Estimated Result Display Banner */}
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-950 text-white border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-950 text-white border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
             <div>
               <span className="text-xs uppercase font-extrabold tracking-wider text-cyan-400 block mb-1">
                 {t.calculator.estimatedRange}
@@ -206,9 +208,9 @@ export const ValuationCalculator = () => {
 
             <button
               onClick={handleWhatsappSubmit}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 hover:to-green-400 text-white font-extrabold text-base flex items-center justify-center gap-3 shadow-xl shadow-green-600/30 hover:scale-105 active:scale-95 transition-all shrink-0"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base flex items-center justify-center gap-3 shadow-xl shadow-green-600/30 hover:scale-105 active:scale-95 transition-all shrink-0"
             >
-              <MessageSquare className="w-5 h-5 fill-white" />
+              <WhatsAppIcon className="w-5 h-5 text-white" />
               <span>{t.calculator.submitWhatsapp}</span>
             </button>
           </div>
