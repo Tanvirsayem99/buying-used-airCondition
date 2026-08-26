@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { PHONE_NUMBER, DISPLAY_PHONE } from "@/app/data/content";
 import { Snowflake, Phone, Menu, X, Globe, Sparkles } from "lucide-react";
+import Image from "next/image";
+import logo from "@/app/favicon.ico"
+import Link from "next/link";
 
 export const Navbar = () => {
   const { lang, toggleLanguage, t } = useLanguage();
@@ -57,8 +60,8 @@ export const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200/80 py-2.5 shadow-md shadow-slate-200/40"
-          : "bg-gradient-to-b from-white/98 via-white/85 to-transparent py-3 sm:py-4"
+        ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200/80 py-2.5 shadow-md shadow-slate-200/40"
+        : "bg-gradient-to-b from-white/98 via-white/85 to-transparent py-3 sm:py-4"
         }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -67,7 +70,7 @@ export const Navbar = () => {
           <a href="#" className="flex items-center gap-2 sm:gap-2.5 group min-w-0 shrink">
             <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-blue-600 p-0.5 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300 shrink-0">
               <div className="w-full h-full bg-white rounded-[10px] sm:rounded-[14px] flex items-center justify-center">
-                <Snowflake className="w-4 h-4 sm:w-6 sm:h-6 text-cyan-600 animate-spin-slow group-hover:rotate-180 transition-transform duration-700" />
+                <Image src={logo} alt="logo" width={50} height={50} className="w-4 h-4 sm:w-6 sm:h-6 text-cyan-600 animate-spin-slow group-hover:rotate-180 transition-transform duration-700" />
               </div>
             </div>
             <div className="flex flex-col min-w-0">
@@ -85,16 +88,16 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className={`text-xs xl:text-[13px] font-bold px-2 py-1.5 xl:px-2.5 rounded-lg transition-colors whitespace-nowrap ${item.isHighlight
-                    ? "text-cyan-800 hover:text-cyan-900 bg-cyan-50/90 hover:bg-cyan-100 border border-cyan-200/80 shadow-2xs"
-                    : "text-slate-700 hover:text-cyan-600 hover:bg-slate-100/80"
+                  ? "text-cyan-800 hover:text-cyan-900 bg-cyan-50/90 hover:bg-cyan-100 border border-cyan-200/80 shadow-2xs"
+                  : "text-slate-700 hover:text-cyan-600 hover:bg-slate-100/80"
                   }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -145,18 +148,18 @@ export const Navbar = () => {
         <div className="lg:hidden bg-white/98 backdrop-blur-2xl border-b border-slate-200/90 px-4 py-5 shadow-2xl space-y-4 max-h-[calc(100vh-80px)] overflow-y-auto">
           <nav className="flex flex-col gap-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-between ${item.isHighlight
-                    ? "bg-cyan-50 border border-cyan-300 text-cyan-800 font-black shadow-2xs"
-                    : "bg-slate-50/80 hover:bg-slate-100 text-slate-800 hover:text-cyan-600 border border-slate-100"
+                  ? "bg-cyan-50 border border-cyan-300 text-cyan-800 font-black shadow-2xs"
+                  : "bg-slate-50/80 hover:bg-slate-100 text-slate-800 hover:text-cyan-600 border border-slate-100"
                   }`}
               >
                 <span>{item.label}</span>
                 <span className="text-xs text-slate-400 font-normal">›</span>
-              </a>
+              </Link>
             ))}
           </nav>
 
