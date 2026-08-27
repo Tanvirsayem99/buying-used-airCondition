@@ -11,6 +11,7 @@ export interface ContentType {
     contact: string;
     callNow: string;
     whatsappUs: string;
+    samples: string;
   };
   hero: {
     badge: string;
@@ -134,6 +135,16 @@ export interface ContentType {
     hoursLabel: string;
     rights: string;
   };
+  samplesSection: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    allCategories: string;
+    inquireBtn: string;
+    postedByAdmin: string;
+    noProducts: string;
+  };
 }
 
 export const PHONE_NUMBER = "+966531487293";
@@ -187,6 +198,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       contact: "اتصل بنا",
       callNow: "اتصل الآن",
       whatsappUs: "تواصل واتساب",
+      samples: "معرض العينات",
     },
     hero: {
       badge: "الخدمة الأولى لشراء المكيفات في القطيف والدمام والخبر",
@@ -495,6 +507,16 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       hoursLabel: "ساعات العمل: 24/7 طوال أيام الأسبوع",
       rights: "جميع الحقوق محفوظة © 2026 شراء مكيفات مستعمل (القطيف - الدمام - الخبر).",
     },
+    samplesSection: {
+      badge: "معرض المكيفات والأجهزة المستعملة",
+      title: "نماذج من المكيفات والأجهزة المتوفرة",
+      titleHighlight: "للمعاينة والشراء",
+      subtitle: "تصفح أحدث المكيفات والمعدات المستعملة المسجلة لدينا في القطيف والدمام والخبر بأسعار تنافسية وحالة ممتازة",
+      allCategories: "جميع الفئات",
+      inquireBtn: "استفسر عبر الواتساب",
+      postedByAdmin: "تم النشر بواسطة الإدارة",
+      noProducts: "لا توجد عينات معروضة حالياً. يمكنك التواصل معنا مباشرة للأستفسار.",
+    },
   },
   en: {
     nav: {
@@ -509,6 +531,7 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       contact: "Contact",
       callNow: "Call Now",
       whatsappUs: "WhatsApp",
+      samples: "Sample Products",
     },
     hero: {
       badge: "#1 Used AC Buyer in Qatif, Dammam & Al Khobar",
@@ -814,8 +837,18 @@ export const siteContent: Record<'ar' | 'en', ContentType> = {
       phoneLabel: "Phone / Direct Call:",
       whatsappLabel: "Direct WhatsApp:",
       locationLabel: "Coverage: Qatif, Dammam, Al Khobar",
-      hoursLabel: "Working Hours: 24/7 Everyday",
-      rights: "All rights reserved © 2026 Qatif, Dammam & Al Khobar Used AC Buyer.",
+      hoursLabel: "Working Hours: 24/7 All Week",
+      rights: "All rights reserved © 2026 Buying Used Air Conditioners (Qatif - Dammam - Al Khobar).",
+    },
+    samplesSection: {
+      badge: "Sample Used ACs & Equipment",
+      title: "Available Used Air Conditioners",
+      titleHighlight: "Sample Showcase",
+      subtitle: "Browse recent used air conditioners and appliances available across Qatif, Dammam, and Al Khobar.",
+      allCategories: "All Categories",
+      inquireBtn: "Inquire via WhatsApp",
+      postedByAdmin: "Posted by Admin",
+      noProducts: "No sample products posted yet. Contact us directly on WhatsApp for live inventory.",
     },
   },
 };

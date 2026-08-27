@@ -21,12 +21,13 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    {
-      href: "/#calculator",
-      label: lang === "ar" ? "⚡ حاسبة الأسعار" : "⚡ Price Calculator",
-      isHighlight: true,
-    },
+  interface NavItem {
+    href: string;
+    label: string;
+    isHighlight?: boolean;
+  }
+
+  const navItems: NavItem[] = [
     {
       href: "/#services",
       label: t.nav.services,
@@ -34,6 +35,11 @@ export const Navbar = () => {
     {
       href: "/#scrap-metals",
       label: t.nav.scrapMetals,
+    },
+    {
+      href: "/#samples",
+      label: t.nav.samples,
+      isHighlight: true,
     },
     {
       href: "/#why-us",

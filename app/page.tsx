@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { ValuationCalculator } from "@/components/ValuationCalculator";
 import { Services } from "@/components/Services";
 import { ScrapMetalSection } from "@/components/ScrapMetalSection";
+import { SampleSection } from "@/components/SampleSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CoverageAreas } from "@/components/CoverageAreas";
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <ValuationCalculator />
       <ScrapMetalSection />
+      <SampleSection />
       <Services />
       <WhyChooseUs />
       <HowItWorks />

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "شراء مكيفات مستعمل القطيف | أفضل أسعار الكاش والفك المجاني",
     description: "تواصل معنا لبيع مكيفك المستعمل بأعلى سعر في القطيف والمنطقة الشرقية. خدمة 24 ساعة ونقل فوري.",
-    url: "https://furniturebuyerksa.com",
+    url: "https://buying-used-air-condition.vercel.app",
     siteName: "شراء مكيفات مستعمل القطيف",
     locale: "ar_SA",
     type: "website",
