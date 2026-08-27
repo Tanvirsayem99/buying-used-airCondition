@@ -22,7 +22,7 @@ export default function Home() {
       <Hero />
       <ValuationCalculator />
       <ScrapMetalSection />
-      <SampleSection />
+      {/* <SampleSection /> */}
       <Services />
       <WhyChooseUs />
       <HowItWorks />

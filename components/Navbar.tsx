@@ -36,11 +36,11 @@ export const Navbar = () => {
       href: "/#scrap-metals",
       label: t.nav.scrapMetals,
     },
-    {
-      href: "/#samples",
-      label: t.nav.samples,
-      isHighlight: true,
-    },
+    // {
+    //   href: "/#samples",
+    //   label: t.nav.samples,
+    //   isHighlight: true,
+    // },
     {
       href: "/#why-us",
       label: t.nav.whyUs,
