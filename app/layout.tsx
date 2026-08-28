@@ -76,6 +76,9 @@ export const metadata: Metadata = {
       "en-US": "https://buyallscrapksa.com",
     },
   },
+  verification: {
+    google: "vPdN5WTgh2qQ5IVPjTUcg1O9LiipAzYeO2r4Soa2y-M",
+  },
   openGraph: {
     title: "شراء مكيفات مستعمل القطيف | نشتري المكيفات والسكراب والأثاث بأعلى سعر كاش",
     description:
@@ -128,6 +131,7 @@ export default function RootLayout({
       className={`${tajawal.variable} ${cairo.variable} ${outfit.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
       <head>
+        <meta name="google-site-verification" content="vPdN5WTgh2qQ5IVPjTUcg1O9LiipAzYeO2r4Soa2y-M" />
         <JsonLd data={[localBusinessSchema, webSiteSchema]} />
       </head>
       <body className="min-h-full flex flex-col bg-[#f8fafc] text-slate-900 selection:bg-cyan-600 selection:text-white">
