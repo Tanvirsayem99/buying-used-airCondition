@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   },
   description:
     "مؤسسة شراء مكيفات مستعمل القطيف: نشتري جميع أنواع المكيفات (سبليت، شباك، مركزي، سكراب)، سكراب المعادن، الأثاث المستعمل، والأجهزة الكهربائية في القطيف، تاروت، سيهات، صفوى، والعوامية بأعلى الأسعار والدفع نقدي فوري مع فك ونقل مجاني 100%.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   keywords: [
     // Requested Arabic Keywords
     "شراء سكراب بالقطيف",

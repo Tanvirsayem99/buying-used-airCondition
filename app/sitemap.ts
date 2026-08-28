@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://buyallscrapksa.com";
@@ -29,8 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: route === "" ? "daily" : "weekly",
+      changeFrequency: route === "" ? 'daily' : 'weekly',
       priority,
-    };
-  });
+    }
+  })
 }
