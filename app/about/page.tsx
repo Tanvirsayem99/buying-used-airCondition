@@ -5,9 +5,12 @@ import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "عن الشركة | شراء مكيفات مستعمل القطيف والدمام والخبر",
+  title: "عن المؤسسة | شراء مكيفات مستعمل القطيف - buyallscrapksa.com",
   description:
-    "تعرف على مؤسستنا الرائدة في شراء وتثمين المكيفات المستعملة وسكراب المعادن والأجهزة الكهربائية بأعلى الأسعار ودفع نقدي فوري في القطيف والدمام والخبر مع خدمة فك ونقل مجاني 100%.",
+    "تعرف على مؤسستنا الرائدة في شراء وتثمين المكيفات المستعملة وسكراب المعادن والأثاث والأجهزة الكهربائية بأعلى الأسعار ودفع نقدي فوري في القطيف وسيهات وصفوى وتاروت والعوامية.",
+  alternates: {
+    canonical: "https://buyallscrapksa.com/about",
+  },
 };
 
 export default function AboutPage() {
