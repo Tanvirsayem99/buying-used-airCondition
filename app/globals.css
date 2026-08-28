@@ -21,6 +21,20 @@ body {
   color: #0f172a;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Performance Offscreen Content Visibility */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
+}
+
+/* GPU Accelerated Animations */
+.gpu-accel {
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* Custom Light Glassmorphism Utilities */

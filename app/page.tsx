@@ -1,18 +1,56 @@
 import React from "react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ValuationCalculator } from "@/components/ValuationCalculator";
-import { Services } from "@/components/Services";
-import { ScrapMetalSection } from "@/components/ScrapMetalSection";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { HowItWorks } from "@/components/HowItWorks";
-import { CoverageAreas } from "@/components/CoverageAreas";
-import { Testimonials } from "@/components/Testimonials";
-import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { JsonLd, generateLocalBusinessSchema, generateWebSiteSchema, generateFAQSchema } from "@/components/JsonLd";
+import { CalculatorSkeleton, SectionSkeleton } from "@/components/Skeleton";
+import { JsonLd, generateLocalBusinessSchema, generateWebSiteSchema } from "@/components/JsonLd";
+
+// Dynamic imports with Skeleton Loading Fallbacks for optimal Core Web Vitals
+const ValuationCalculator = dynamic(
+  () => import("@/components/ValuationCalculator").then((m) => m.ValuationCalculator),
+  { loading: () => <CalculatorSkeleton /> }
+);
+
+const ScrapMetalSection = dynamic(
+  () => import("@/components/ScrapMetalSection").then((m) => m.ScrapMetalSection),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const Services = dynamic(
+  () => import("@/components/Services").then((m) => m.Services),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const WhyChooseUs = dynamic(
+  () => import("@/components/WhyChooseUs").then((m) => m.WhyChooseUs),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const HowItWorks = dynamic(
+  () => import("@/components/HowItWorks").then((m) => m.HowItWorks),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const CoverageAreas = dynamic(
+  () => import("@/components/CoverageAreas").then((m) => m.CoverageAreas),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const Testimonials = dynamic(
+  () => import("@/components/Testimonials").then((m) => m.Testimonials),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const FAQSection = dynamic(
+  () => import("@/components/FAQSection").then((m) => m.FAQSection),
+  { loading: () => <SectionSkeleton /> }
+);
+
+const FloatingCTA = dynamic(
+  () => import("@/components/FloatingCTA").then((m) => m.FloatingCTA)
+);
 
 export const metadata: Metadata = {
   title: "شراء مكيفات مستعمل القطيف | نشتري مكيفات سبليت وشباك وسكراب بأعلى سعر كاش",
