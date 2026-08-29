@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const posts = [
+const posts = [
   {
     slug: "دليل-شراء-المكيفات-المستعملة-بالقطيف",
     title: "دليل شراء المكيفات المستعملة بالقطيف: كيف تحصل على أعلى سعر لمكيفك القديم؟",

@@ -3,7 +3,8 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { PHONE_NUMBER } from "@/app/data/content";
-import { Phone, MessageSquare } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { WhatsAppChatPopup } from "@/components/WhatsAppChatPopup";
 
 export const FloatingCTA = () => {
@@ -26,12 +27,12 @@ export const FloatingCTA = () => {
           </a>
 
           <a
-            href={`https://wa.me/996531487293`}
+            href={`https://wa.me/966531487293`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs shadow-lg shadow-emerald-600/30"
           >
-            <MessageSquare className="w-4 h-4 fill-white" />
+            <WhatsAppIcon className="w-4 h-4 fill-white" />
             <span>{t.nav.whatsappUs}</span>
           </a>
         </div>
