@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import React from "react";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
+
+const Footer = dynamic(() => import("@/components/Footer").then((m) => m.Footer));
+const FloatingCTA = dynamic(() => import("@/components/FloatingCTA").then((m) => m.FloatingCTA));
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/app/data/content";

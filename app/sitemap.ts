@@ -12,18 +12,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/regions/qatif",
     "/regions/dammam",
     "/regions/khobar",
-    "/regions/saihat",
-    "/regions/safwa",
-    "/regions/tarout",
-    "/regions/awamiyah",
     "/blog",
     "/about",
+    "/شراء-اثاث-مستعمل-الخبر",
+    "/شراء-اثاث-مستعمل-الدمام",
+    "/شراء-اثاث-مستعمل-القطيف",
+    "/مشتري-مكيفات-مستعملة",
+    "/شراء-خردة-القطيف",
+    "/شراء-أجهزة-القطيف",
   ];
 
   return routes.map((route) => {
     let priority = 0.8;
     if (route === "") priority = 1.0;
-    else if (route.includes("buy-")) priority = 0.95;
+    else if (route.includes("buy-") || route.includes("شراء") || route.includes("مشتري")) priority = 0.95;
     else if (route.includes("regions")) priority = 0.85;
 
     return {

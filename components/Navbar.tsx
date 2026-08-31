@@ -25,19 +25,15 @@ export const Navbar = () => {
   const navItems = [
     { href: "/", label: lang === "ar" ? "الرئيسية" : "Home" },
     {
-      href: "/buy-used-ac-qatif",
+      href: "/مشتري-مكيفات-مستعملة",
       label: lang === "ar" ? "شراء مكيفات مستعملة" : "Used AC Buyer",
     },
     {
-      href: "/buy-scrap-qatif",
+      href: "/شراء-خردة-القطيف",
       label: lang === "ar" ? "شراء سكراب" : "Scrap Buyer",
     },
     {
-      href: "/buy-furniture-qatif",
-      label: lang === "ar" ? "شراء اثاث مستعمل" : "Used Furniture",
-    },
-    {
-      href: "/buy-appliances-qatif",
+      href: "/شراء-أجهزة-القطيف",
       label: lang === "ar" ? "شراء أجهزة مستعملة" : "Used Appliances",
     },
     { href: "/blog", label: lang === "ar" ? "المدونة" : "Blog" },
@@ -45,18 +41,17 @@ export const Navbar = () => {
   ];
 
   const regionLinks = [
-    { href: "/regions/qatif", label: lang === "ar" ? "شراء مكيفات بالقطيف" : "Qatif AC Buyer" },
-    { href: "/regions/dammam", label: lang === "ar" ? "شراء مكيفات بالدمام" : "Dammam AC Buyer" },
-    { href: "/regions/khobar", label: lang === "ar" ? "شراء مكيفات بالخبر" : "Al Khobar AC Buyer" },
+    { href: "/شراء-اثاث-مستعمل-القطيف", label: lang === "ar" ? "شراء الاثاث مستعمل القطيف" : "Buy used furniture in Qatif" },
+    { href: "/شراء-اثاث-مستعمل-الدمام", label: lang === "ar" ? "شراء الاثاث مستعمل الدمام" : "Buy used furniture in Dammam" },
+    { href: "/شراء-اثاث-مستعمل-الخبر", label: lang === "ar" ? "شراء الاثاث مستعمل الخبر" : "Buy used furniture in Khobar" },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200/80 py-2.5 shadow-md shadow-slate-200/40"
-          : "bg-gradient-to-b from-white/98 via-white/85 to-transparent py-3 sm:py-4"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200/80 py-2.5 shadow-md shadow-slate-200/40"
+        : "bg-gradient-to-b from-white/98 via-white/85 to-transparent py-3 sm:py-4"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2">
@@ -105,7 +100,7 @@ export const Navbar = () => {
                 className="flex items-center gap-1 text-xs xl:text-[13px] font-bold px-2.5 py-1.5 rounded-lg text-slate-700 hover:text-cyan-700 hover:bg-slate-100/80 transition-colors cursor-pointer"
                 aria-label={lang === "ar" ? "قائمة المناطق والخدمات" : "Regions and services menu"}
               >
-                <span>{lang === "ar" ? "المناطق" : "Regions"}</span>
+                <span>{lang === "ar" ? "الأثاث" : "Furniture"}</span>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform" />
               </button>
               <div className="absolute top-full right-0 mt-1 w-52 bg-white rounded-xl shadow-xl border border-slate-200 p-2 hidden group-hover:block z-50">
@@ -186,7 +181,7 @@ export const Navbar = () => {
                 onClick={() => setRegionsOpen(!regionsOpen)}
                 className="w-full px-4 py-2.5 rounded-xl font-bold text-sm flex items-center justify-between bg-cyan-50 text-cyan-800 border border-cyan-200"
               >
-                <span>{lang === "ar" ? "مناطق التغطية والخدمات" : "Coverage Regions"}</span>
+                <span>{lang === "ar" ? "الأثاث" : "Furniture"}</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${regionsOpen ? "rotate-180" : ""}`} />
               </button>
               {regionsOpen && (

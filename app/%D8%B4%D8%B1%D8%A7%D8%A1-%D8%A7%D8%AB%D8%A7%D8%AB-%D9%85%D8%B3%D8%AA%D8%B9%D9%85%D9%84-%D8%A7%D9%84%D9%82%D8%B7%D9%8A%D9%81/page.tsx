@@ -1,53 +1,137 @@
 import type { Metadata } from "next";
 import React from "react";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, generateServiceSchema, generateFAQSchema } from "@/components/JsonLd";
+import { Footer } from "@/components/Footer";
+import { FloatingCTA } from "@/components/FloatingCTA";
 import { FAQSection } from "@/components/FAQSection";
 import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/app/data/content";
-import { Armchair, Sparkles, Phone, ShieldCheck, Truck, Banknote } from "lucide-react";
+import { Armchair, Sparkles, Phone, ShieldCheck, Truck, Banknote, UtensilsCrossed, Sofa } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
+const CANONICAL_PATH = "/شراء-اثاث-مستعمل-القطيف";
+
 export const metadata: Metadata = {
-  title: "شراء اثاث مستعمل بالقطيف | مشتري أثاث مستعمل غرف نوم ومجالس بأعلى سعر",
+  title: "شراء اثاث مستعمل بالقطيف | أفضل الأسعار وكاش فوري",
   description: "افضل مشتري اثاث مستعمل بالقطيف. نشتري غرف النوم، المجالس، الكنب، المطابخ، ومعدات المطاعم والمقاهي بالقطيف والدفع كاش فوري مع فك ونقل مجاني.",
   keywords: [
     "شراء اثاث مستعمل بالقطيف",
-    "شراء أثاث مستعمل",
+    "شراء أثاث مستعمل بالقطيف",
     "مشتري أثاث مستعمل بالقطيف",
+    "شراء اثاث مستعمل القطيف",
     "used furniture buyer Qatif",
     "sell used furniture Qatif",
   ],
   alternates: {
-    canonical: "https://buyallscrapksa.com/buy-furniture-qatif",
+    canonical: `https://buyallscrapksa.com${CANONICAL_PATH}`,
   },
   openGraph: {
     title: "شراء اثاث مستعمل بالقطيف | أفضل تثمين ونقل مجاني كاش",
-    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالقطيف وسيهات وتاروت. دفع فوري ونقل مجاني بنفس اليوم.",
-    url: "https://buyallscrapksa.com/buy-furniture-qatif",
-    siteName: "شراء مكيفات مستعمل القطيف",
+    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالقطيف وسيهات وتاروت وصفوى. دفع فوري ونقل مجاني بنفس اليوم.",
+    url: `https://buyallscrapksa.com${CANONICAL_PATH}`,
+    // Neutral site name so this page builds its own topical relevance for
+    // "furniture" instead of inheriting an AC-first brand signal.
+    siteName: "buyallscrapksa.com | نشتري الكل بالقطيف",
     type: "website",
   },
 };
 
-export default function FurniturePage() {
+export default function QatifFurniturePage() {
   const serviceSchema = generateServiceSchema({
     name: "شراء اثاث مستعمل بالقطيف",
     description: "شراء وتثمين كافة قطع الأثاث المستعمل، غرف النوم، المجالس، والمطابخ بأعلى الأسعار بالقطيف.",
     serviceType: "Used Furniture Buying Service",
-    url: "/buy-furniture-qatif",
+    url: CANONICAL_PATH,
   });
 
   const pageFaqs = [
     {
-      question: "ما هي أنواع الأثاث التي تشترونها بالقطيف؟",
-      answer: "نشتري غرف النوم الكاملة، المجالس والكنب، طاولات الطعام، المطابخ الألومنيوم والخشب، ومعدات المطاعم المستعملة.",
+      question: "ما هي أحياء ومناطق القطيف التي تغطونها لمشتري الأثاث؟",
+      answer: "نغطي كافة أحياء مدينة القطيف (المجيدية، الشاطئ، الناصرة، المنيرة، المزروع، سيهات، تاروت، صفوى، والعوامية) في غضون 30 دقيقة.",
     },
     {
-      question: "هل تقومون بفك ونقل الأثاث مجاناً؟",
-      answer: "نعم، نتحمل تكاليف الفك والتغليف والنقل كاملة من داخل منزلك دون أي تكلفة إضافية عليك.",
+      question: "ما هي أنواع الأثاث التي تشترونها بالقطيف؟",
+      answer: "نشتري غرف النوم الكاملة، المجالس والكنب، طاولات الطعام، المطابخ الألومنيوم والخشب، ومعدات المطاعم والمقاهي المستعملة.",
+    },
+    {
+      question: "هل يتم الدفع نقداً كاش قبل الفك والتحميل بالقطيف؟",
+      answer: "نعم، يتم الدفع نقداً (كاش) فوراً في الموقع قبل البدء في فك وتحميل الأثاث.",
+    },
+    {
+      question: "كيف يتم تحديد سعر الأثاث المستعمل؟",
+      answer: "يتم تحديد السعر بناءً على نوع القطعة، حالتها العامة، الخامة (خشب طبيعي، MDF، ألمنيوم)، وعمرها التشغيلي. يمكنك استخدام حاسبة التقييم أعلاه للحصول على تقدير سريع.",
+    },
+    {
+      question: "هل تشترون الأثاث المتضرر أو الذي يحتاج إصلاح؟",
+      answer: "نعم، نشتري الأثاث بمختلف حالاته سواء كان بحالة ممتازة أو يحتاج صيانة بسيطة، بأسعار عادلة تعكس الحالة الفعلية.",
+    },
+  ];
+  const furnitureTypes = [
+    {
+      icon: Armchair,
+      title: "غرف النوم",
+      desc: "غرف نوم مزدوجة، مفردة، وأطفال بكامل قطعها (سرير، دولاب، تسريحة، كومودينو) بأي خامة.",
+      img: "/images/furniture-bedroom.jpg",
+      alt: "شراء غرفة نوم مستعملة بالقطيف",
+    },
+    {
+      icon: Sofa,
+      title: "المجالس والكنب",
+      desc: "طقومات كنب عربي وإفرنجي، مجالس أرضية، وكراسي منفردة بجميع الأحجام والخامات.",
+      img: "/images/furniture-majlis.jpg",
+      alt: "شراء مجالس وكنب مستعمل بالقطيف",
+    },
+    {
+      icon: Banknote,
+      title: "طاولات السفرة",
+      desc: "طاولات سفرة كاملة مع الكراسي، طاولات صالة، وطاولات مكتب منزلي.",
+      img: "/images/furniture-dining.jpg",
+      alt: "شراء طاولة سفرة مستعملة بالقطيف",
+    },
+    {
+      icon: ShieldCheck,
+      title: "المطابخ",
+      desc: "مطابخ ألمنيوم وخشب بكامل تجهيزاتها، وحدات علوية وسفلية، وأسطح رخام أو كوريان.",
+      img: "/images/furniture-kitchen.jpg",
+      alt: "شراء مطبخ مستعمل بالقطيف",
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "معدات المطاعم والمقاهي",
+      desc: "طاولات وكراسي تجارية، ثلاجات عرض، أفران، وتجهيزات المطابخ التجارية بالكامل.",
+      img: "/images/furniture-restaurant.jpg",
+      alt: "شراء معدات مطاعم ومقاهي مستعملة بالقطيف",
+    },
+    {
+      icon: Truck,
+      title: "قطع متفرقة",
+      desc: "مكاتب، خزائن ملفات، أثاث مكتبي، ومفروشات منزلية أخرى غير مذكورة أعلاه.",
+      img: "/images/furniture-misc.jpg",
+      alt: "شراء أثاث متنوع مستعمل بالقطيف",
+    },
+  ];
+  const testimonials = [
+    {
+      quote:
+        "بعت غرفة نوم كاملة ومجلس عربي، السعر كان ممتاز والفريق فك ونقل كل شي بدون أي خدش. ما توقعت السرعة هذي.",
+      name: "أم فيصل العلي",
+      area: "القطيف - حي الشاطئ",
+      detail: "بيع غرفة نوم ومجلس",
+    },
+    {
+      quote:
+        "عندي مطعم صغير بصفوى وأغلقته، تواصلت معهم لبيع طاولات وكراسي وثلاجة عرض. جاؤوا بنفس اليوم واشتروا الكل كاش.",
+      name: "خالد الرمضان",
+      area: "صفوى",
+      detail: "بيع معدات مطعم كاملة",
+    },
+    {
+      quote:
+        "أرسلت صور المطبخ عبر الواتساب واستلمت تقييم خلال دقائق. الفك احترافي والدفع كان فوري بدون أي تأخير.",
+      name: "منى الشيخ",
+      area: "تاروت",
+      detail: "بيع مطبخ ألمنيوم",
     },
   ];
 
@@ -57,7 +141,7 @@ export default function FurniturePage() {
       <Navbar />
 
       <div className="pt-24 sm:pt-28 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ name: "شراء اثاث مستعمل بالقطيف", url: "/buy-furniture-qatif" }]} />
+        <Breadcrumbs items={[{ name: "شراء اثاث مستعمل بالقطيف", url: "/شراء-اثاث-مستعمل-القطيف" }]} />
 
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-950 via-slate-900 to-cyan-950 text-white rounded-3xl p-6 sm:p-12 mb-12 shadow-2xl relative overflow-hidden">
@@ -77,7 +161,7 @@ export default function FurniturePage() {
                 href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع اثاث مستعمل بالقطيف. أرجو التواصل وإرسال التثمين.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm flex items-center gap-2.5 shadow-lg shadow-emerald-600/30 transition-transform hover:scale-105"
+                className="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-sm flex items-center gap-2.5 shadow-lg shadow-emerald-700/30 transition-transform hover:scale-105"
               >
                 <WhatsAppIcon className="w-5 h-5 text-white" />
                 <span>أرسل صور الأثاث عبر الواتساب</span>
@@ -101,7 +185,7 @@ export default function FurniturePage() {
                 شراء أثاث مستعمل ومجالس بالقطيف بأعلى السبل
               </h2>
               <p className="text-slate-600 leading-relaxed font-medium text-sm sm:text-base">
-                نحن متخصصون في <strong>شراء أثاث مستعمل</strong> بكافة أشكاله وحالاته. نصل إليك فوراً في القطيف، تاروت، سيهات، صفوى، والعوامية للمعاينة وإعطاء التقييم العادل والمستحق.
+                نحن متخصصون في <strong>شراء أثاث مستعمل بالقطيف</strong> بكافة أشكاله وحالاته. نصل إليك فوراً في القطيف، تاروت، سيهات، صفوى، والعوامية للمعاينة وإعطاء التقييم العادل والمستحق.
               </p>
             </div>
 
@@ -148,7 +232,7 @@ export default function FurniturePage() {
                 href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع أثاث مستعمل بالقطيف.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-102"
+                className="w-full py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-102"
               >
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>تواصل عبر الواتساب</span>

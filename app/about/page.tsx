@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { AboutContent } from "@/components/AboutContent";
-import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
+
+const Footer = dynamic(() => import("@/components/Footer").then((m) => m.Footer));
+const FloatingCTA = dynamic(() => import("@/components/FloatingCTA").then((m) => m.FloatingCTA));
 
 export const metadata: Metadata = {
   title: "عن المؤسسة | شراء مكيفات مستعمل القطيف - buyallscrapksa.com",

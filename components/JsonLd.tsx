@@ -1,4 +1,5 @@
 import React from "react";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "@/app/data/content";
 
 export const siteDomain = "https://buyallscrapksa.com";
 export const siteName = "شراء مكيفات مستعمل القطيف";
@@ -62,7 +63,7 @@ export const generateLocalBusinessSchema = () => ({
   ],
   description:
     "مؤسسة شراء مكيفات مستعمل القطيف وسكراب المعادن والأثاث والأجهزة المستعملة بأعلى أسعار الكاش والفك والنقل المجاني 100% في القطيف، تاروت، سيهات، صفوى والعوامية.",
-  sameAs: [siteDomain],
+  sameAs: [siteDomain, FACEBOOK_URL, INSTAGRAM_URL],
 });
 
 export const generateWebSiteSchema = () => ({

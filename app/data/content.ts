@@ -150,6 +150,8 @@ export interface ContentType {
 export const PHONE_NUMBER = "+966531487293";
 export const WHATSAPP_NUMBER = "966531487293";
 export const DISPLAY_PHONE = "0531487293";
+export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61593643395854";
+export const INSTAGRAM_URL = "https://www.instagram.com/buyallscrapksa/";
 
 /**
  * Robust WhatsApp number formatter ensuring correct international Saudi Arabia (966) format

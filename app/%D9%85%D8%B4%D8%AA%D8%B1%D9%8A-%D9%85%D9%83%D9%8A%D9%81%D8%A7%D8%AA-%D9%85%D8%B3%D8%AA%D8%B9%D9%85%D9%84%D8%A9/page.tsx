@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import React from "react";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd, generateServiceSchema, generateFAQSchema } from "@/components/JsonLd";
-import { ValuationCalculator } from "@/components/ValuationCalculator";
-import { FAQSection } from "@/components/FAQSection";
+
+const Footer = dynamic(() => import("@/components/Footer").then((m) => m.Footer));
+const FloatingCTA = dynamic(() => import("@/components/FloatingCTA").then((m) => m.FloatingCTA));
+const ValuationCalculator = dynamic(() => import("@/components/ValuationCalculator").then((m) => m.ValuationCalculator));
+const FAQSection = dynamic(() => import("@/components/FAQSection").then((m) => m.FAQSection));
 import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/app/data/content";
 import { Wind, CheckCircle2, ShieldCheck, Truck, Banknote, Sparkles, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";

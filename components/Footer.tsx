@@ -3,9 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/app/data/content";
+import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, FACEBOOK_URL, INSTAGRAM_URL, getWhatsAppUrl } from "@/app/data/content";
 import { Snowflake, Phone, MapPin, Clock, Sparkles } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { FacebookIcon, InstagramIcon } from "@/components/SocialIcons";
 
 export const Footer = () => {
   const { lang, t } = useLanguage();
@@ -159,6 +160,30 @@ export const Footer = () => {
               <div className="flex items-center gap-2 text-slate-400 font-medium">
                 <Clock className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>خدمة 24/7 طوال الأسبوع</span>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="pt-2 flex items-center gap-3">
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-md active:scale-95"
+                  aria-label="صفحة الفيسبوك الرسمية"
+                  title="فيسبوك"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-md active:scale-95"
+                  aria-label="حساب الإنستغرام الرسمي"
+                  title="إنستغرام"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>

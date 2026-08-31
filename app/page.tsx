@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Footer } from "@/components/Footer";
 import { CalculatorSkeleton, SectionSkeleton } from "@/components/Skeleton";
 import { JsonLd, generateLocalBusinessSchema, generateWebSiteSchema } from "@/components/JsonLd";
 
@@ -46,6 +45,10 @@ const Testimonials = dynamic(
 const FAQSection = dynamic(
   () => import("@/components/FAQSection").then((m) => m.FAQSection),
   { loading: () => <SectionSkeleton /> }
+);
+
+const Footer = dynamic(
+  () => import("@/components/Footer").then((m) => m.Footer)
 );
 
 const FloatingCTA = dynamic(

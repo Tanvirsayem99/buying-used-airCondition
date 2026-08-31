@@ -1,3 +1,14 @@
+if (typeof globalThis.btoa === "function") {
+  const _origBtoa = globalThis.btoa;
+  globalThis.btoa = function (str: string) {
+    try {
+      return _origBtoa(str);
+    } catch {
+      return Buffer.from(str, "utf-8").toString("base64");
+    }
+  };
+}
+
 import type { Metadata } from "next";
 import { Tajawal, Cairo, Outfit, Inter } from "next/font/google";
 import "./globals.css";
