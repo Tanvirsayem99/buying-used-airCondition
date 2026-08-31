@@ -51,7 +51,7 @@ export const HowItWorks = () => {
                 <div className="w-16 h-16 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xs">
                   {renderIcon(step.icon)}
                 </div>
-                <span className="text-4xl font-black text-slate-300 group-hover:text-cyan-600 transition-colors">
+                <span className="text-4xl font-black text-slate-600 group-hover:text-cyan-600 transition-colors">
                   {step.number}
                 </span>
               </div>

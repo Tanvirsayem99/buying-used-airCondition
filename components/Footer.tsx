@@ -42,7 +42,7 @@ export const Footer = () => {
               href={getWhatsAppUrl(WHATSAPP_NUMBER, bannerMsg)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-emerald-600/30 transition-all hover:scale-105"
+              className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-emerald-700/30 transition-all hover:scale-105"
             >
               <WhatsAppIcon className="w-5 h-5 text-white" />
               <span>{t.ctaBanner.whatsappUs}</span>
@@ -167,13 +167,13 @@ export const Footer = () => {
 
         {/* Keywords SEO Footer Tag Cloud */}
         <div className="pt-6 border-t border-slate-800/80 mb-6">
-          <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
+          <p className="text-[11px] text-slate-400 font-medium leading-relaxed">
             <strong>الكلمات المفتاحية الأكثر بحثاً:</strong> شراء سكراب بالقطيف | شراء مكيفات مستعملة بالقطيف | شراء مكيفات سكراب بالقطيف | شراء اثاث مستعمل بالقطيف | شراء أجهزة مستعملة بالقطيف | شراء خردة بالقطيف | بيع سكراب بالقطيف | شراء الأجهزة الكهربائية المستعملة بالقطيف | شراء مكيفات قديمة بالقطيف | شراء مكيفات خربانة بالقطيف | شراء أثاث مستعمل | شراء أجهزة منزلية مستعملة | مشتري سكراب بالقطيف | مشتري مكيفات مستعملة بالقطيف | مشتري أثاث مستعمل بالقطيف | buy used air conditioners Qatif | used AC buyer Qatif | sell used AC Qatif | used air conditioner buyer Saudi Arabia | scrap buyer Qatif | scrap buyer Saudi Arabia | used furniture buyer Qatif | used appliances buyer Qatif | sell used furniture Qatif | sell used appliances Qatif | buy old air conditioners Qatif | AC scrap buyer Qatif | used home appliances buyer Qatif
           </p>
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-500 font-medium">
+        <div className="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-400 font-medium">
           <p>جميع الحقوق محفوظة © 2026 شراء مكيفات مستعمل القطيف - buyallscrapksa.com</p>
         </div>
 

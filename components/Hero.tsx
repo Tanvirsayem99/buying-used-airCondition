@@ -77,7 +77,7 @@ export const Hero = () => {
                 href={getWhatsAppUrl(WHATSAPP_NUMBER, whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base sm:text-lg shadow-xl shadow-emerald-600/25 hover:scale-[1.03] active:scale-98 transition-all animate-pulse-glow"
+                className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-base sm:text-lg shadow-xl shadow-emerald-700/25 hover:scale-[1.03] active:scale-98 transition-all animate-pulse-glow"
               >
                 <WhatsAppIcon className="w-6 h-6 text-white" />
                 <span>{t.hero.whatsappBtn}</span>

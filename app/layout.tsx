@@ -6,7 +6,7 @@ import { JsonLd, generateLocalBusinessSchema, generateWebSiteSchema } from "@/co
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
-  weight: ["400", "500", "700", "800", "900"],
+  weight: ["500", "700", "900"],
   variable: "--font-tajawal",
   display: "swap",
   preload: true,
@@ -15,7 +15,7 @@ const tajawal = Tajawal({
 
 const cairo = Cairo({
   subsets: ["arabic"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["600", "700"],
   variable: "--font-cairo",
   display: "swap",
   preload: true,
@@ -24,7 +24,7 @@ const cairo = Cairo({
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "700"],
   variable: "--font-outfit",
   display: "swap",
   preload: true,
@@ -33,7 +33,7 @@ const outfit = Outfit({
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "700"],
   variable: "--font-inter",
   display: "swap",
   preload: true,

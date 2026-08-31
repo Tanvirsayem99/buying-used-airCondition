@@ -5,7 +5,12 @@ import { useLanguage } from "@/context/LanguageContext";
 import { PHONE_NUMBER } from "@/app/data/content";
 import { Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import { WhatsAppChatPopup } from "@/components/WhatsAppChatPopup";
+import dynamic from "next/dynamic";
+
+const WhatsAppChatPopup = dynamic(
+  () => import("@/components/WhatsAppChatPopup").then((m) => m.WhatsAppChatPopup),
+  { ssr: false }
+);
 
 export const FloatingCTA = () => {
   const { lang, t } = useLanguage();
@@ -30,7 +35,7 @@ export const FloatingCTA = () => {
             href={`https://wa.me/966531487293`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs shadow-lg shadow-emerald-600/30"
+            className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-700 active:bg-emerald-800 text-white font-extrabold text-xs shadow-lg shadow-emerald-700/30"
           >
             <WhatsAppIcon className="w-4 h-4 fill-white" />
             <span>{t.nav.whatsappUs}</span>
