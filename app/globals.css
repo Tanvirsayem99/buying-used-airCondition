@@ -25,6 +25,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Aspect-ratio & Layout Stability Safeguards */
+img, video, iframe {
+  font-size: 0;
+}
+
+img:not([height]) {
+  height: auto;
+}
+
 /* Performance Offscreen Content Visibility */
 .cv-auto {
   content-visibility: auto;

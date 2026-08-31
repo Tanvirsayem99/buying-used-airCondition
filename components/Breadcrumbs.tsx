@@ -34,7 +34,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
             const isLast = idx === items.length - 1;
             return (
               <li key={item.url} className="flex items-center gap-1.5 sm:gap-2">
-                <ChevronLeft className="w-3.5 h-3.5 text-slate-400 shrink-0 rotate-180" />
+                <ChevronLeft className="w-3.5 h-3.5 text-slate-600 shrink-0 rotate-180" />
                 {isLast ? (
                   <span className="text-cyan-900 font-bold bg-cyan-100/70 px-2 py-0.5 rounded-md truncate max-w-[200px] sm:max-w-none">
                     {item.name}

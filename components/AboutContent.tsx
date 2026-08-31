@@ -39,8 +39,10 @@ export const AboutContent = () => {
       {/* Hero Header Section */}
       <section className="relative overflow-hidden">
         {/* Ambient Glow */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-400/15 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute top-1/2 left-10 w-80 h-80 bg-emerald-400/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute top-0 -right-20 w-96 h-96 bg-cyan-400/15 rounded-full blur-[140px]" />
+          <div className="absolute top-64 -left-20 w-80 h-80 bg-emerald-400/15 rounded-full blur-[120px]" />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Breadcrumb */}
@@ -106,9 +108,10 @@ export const AboutContent = () => {
               <div className="relative w-full max-w-md rounded-3xl overflow-hidden p-2 bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-2xl shadow-slate-300/60">
                 <div className="relative rounded-[22px] overflow-hidden bg-slate-900 aspect-[4/3]">
                   <Image
-                    src="/images/hero-ac.jpg"
+                    src="/images/hero-ac.webp"
                     alt="About Used AC Buyer Qatif"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover brightness-95 hover:scale-105 transition-transform duration-700"
                     priority
                   />

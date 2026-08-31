@@ -87,8 +87,10 @@ export const ValuationCalculator = () => {
   return (
     <section id="calculator" className="py-20 bg-slate-50 relative overflow-hidden text-slate-900">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-200/40 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/40 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-24 -left-20 w-96 h-96 bg-cyan-200/40 rounded-full blur-[130px]" />
+        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-blue-200/40 rounded-full blur-[130px]" />
+      </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -178,6 +180,7 @@ export const ValuationCalculator = () => {
                 type="button"
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
                 className="w-10 h-10 rounded-xl bg-white hover:bg-slate-100 flex items-center justify-center text-slate-800 border border-slate-300 shadow-xs active:scale-95 font-bold"
+                aria-label={lang === "ar" ? "إنقاص عدد الأجهزة" : "Decrease unit quantity"}
               >
                 <Minus className="w-5 h-5" />
               </button>
@@ -186,6 +189,7 @@ export const ValuationCalculator = () => {
                 type="button"
                 onClick={() => setQuantity(quantity + 1)}
                 className="w-10 h-10 rounded-xl bg-cyan-100 hover:bg-cyan-200 flex items-center justify-center text-cyan-900 border border-cyan-300 shadow-xs active:scale-95 font-bold"
+                aria-label={lang === "ar" ? "زيادة عدد الأجهزة" : "Increase unit quantity"}
               >
                 <Plus className="w-5 h-5" />
               </button>

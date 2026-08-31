@@ -339,7 +339,7 @@ export default function AdminPage() {
           >
             <CheckCircle className="w-5 h-5 shrink-0" />
             <span className="flex-1">{message.text}</span>
-            <button onClick={() => setMessage(null)} className="text-slate-400 hover:text-white">
+            <button onClick={() => setMessage(null)} className="text-slate-400 hover:text-white" aria-label="إغلاق التنبيه">
               ✕
             </button>
           </div>
@@ -563,6 +563,7 @@ export default function AdminPage() {
                 onClick={loadProducts}
                 className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
                 title="تحديث القائمة"
+                aria-label="تحديث قائمة المنتجات"
               >
                 <RefreshCw className={`w-4 h-4 ${isLoading ? "animate-spin" : ""}`} />
               </button>
@@ -621,6 +622,7 @@ export default function AdminPage() {
                       onClick={() => handleDeleteProduct(item.id)}
                       className="px-3 py-2 rounded-xl bg-rose-950/50 hover:bg-rose-900 text-rose-300 border border-rose-900 text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                       title="حذف هذا المنتج"
+                      aria-label="حذف هذا المنتج"
                     >
                       <Trash2 className="w-4 h-4 text-rose-400" />
                       <span>حذف</span>

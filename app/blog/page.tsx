@@ -110,7 +110,7 @@ export default function BlogIndexPage() {
               </div>
 
               <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs text-slate-400 font-medium">{post.readTime}</span>
+                <span className="text-xs text-slate-600 font-semibold">{post.readTime}</span>
                 <Link
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 hover:text-cyan-700 transition-colors"

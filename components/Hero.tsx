@@ -16,11 +16,13 @@ export const Hero = () => {
       : "Hello, I want to sell used ACs/appliances in Qatif and would like an instant quote.";
 
   return (
-    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-gradient-to-b from-white via-cyan-50/40 to-slate-50 text-slate-900">
-      {/* Radial Background Glow Effects */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyan-400/15 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-emerald-400/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 min-h-[820px] sm:min-h-[720px] lg:min-h-[660px] overflow-hidden bg-gradient-to-b from-white via-cyan-50/40 to-slate-50 text-slate-900">
+      {/* Radial Background Glow Effects - Anchored with fixed pixel offsets to prevent CLS during FOUT reflow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-[180px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-400/15 rounded-full blur-[160px]" />
+        <div className="absolute top-[220px] -right-20 w-[500px] h-[500px] bg-emerald-400/15 rounded-full blur-[140px]" />
+        <div className="absolute top-[480px] -left-20 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[120px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -103,12 +105,14 @@ export const Hero = () => {
           <div className="lg:col-span-5 relative flex justify-center">
             <div className="relative w-full max-w-lg rounded-3xl overflow-hidden p-2 bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-2xl shadow-slate-300/60">
 
-              <div className="relative rounded-[22px] overflow-hidden bg-slate-900 aspect-[4/3]">
+              <div className="relative rounded-[22px] overflow-hidden bg-slate-900 aspect-[4/3] min-h-[260px] sm:min-h-[320px]">
                 <Image
-                  src="/images/hero-ac.jpg"
+                  src="/images/hero-ac.webp"
                   alt="Used Air Conditioner Buyer in Qatif"
                   fill
-                  priority
+                  priority={true}
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover brightness-95 hover:scale-105 transition-transform duration-700"
                 />
 

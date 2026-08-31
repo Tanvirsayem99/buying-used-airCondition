@@ -114,8 +114,10 @@ export const SampleSection: React.FC = () => {
   return (
     <section id="samples" className="py-20 bg-gradient-to-b from-white via-slate-50 to-cyan-50/20 text-slate-900 relative overflow-hidden">
       {/* Decorative Glow background elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-24 -right-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 -left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
@@ -207,8 +209,8 @@ export const SampleSection: React.FC = () => {
                       src={item.image}
                       alt={title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      unoptimized
                     />
 
                     {/* Gradient overlay */}
@@ -233,6 +235,7 @@ export const SampleSection: React.FC = () => {
                       onClick={() => setActiveImageModal(item)}
                       className="absolute bottom-4 left-4 p-2.5 rounded-full bg-white/90 hover:bg-white text-slate-800 shadow-lg opacity-90 group-hover/img:scale-110 transition-all cursor-pointer"
                       title={lang === "ar" ? "تكبير الصورة" : "Zoom Image"}
+                      aria-label={lang === "ar" ? "تكبير صورة العينة" : "Zoom product sample image"}
                     >
                       <Maximize2 className="w-4 h-4 text-slate-700" />
                     </button>
@@ -302,6 +305,7 @@ export const SampleSection: React.FC = () => {
               <button
                 onClick={() => setActiveImageModal(null)}
                 className="p-1.5 rounded-full hover:bg-slate-200 text-slate-600 cursor-pointer transition-colors"
+                aria-label={lang === "ar" ? "إغلاق معاينة الصورة" : "Close image modal preview"}
               >
                 <X className="w-5 h-5" />
               </button>
@@ -313,8 +317,8 @@ export const SampleSection: React.FC = () => {
                 src={activeImageModal.image}
                 alt="Product preview"
                 fill
+                sizes="(max-width: 768px) 100vw, 80vw"
                 className="object-contain"
-                unoptimized
               />
             </div>
 

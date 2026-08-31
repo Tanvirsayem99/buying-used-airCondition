@@ -101,7 +101,10 @@ export const Navbar = () => {
 
             {/* Regions Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-xs xl:text-[13px] font-bold px-2.5 py-1.5 rounded-lg text-slate-700 hover:text-cyan-700 hover:bg-slate-100/80 transition-colors cursor-pointer">
+              <button
+                className="flex items-center gap-1 text-xs xl:text-[13px] font-bold px-2.5 py-1.5 rounded-lg text-slate-700 hover:text-cyan-700 hover:bg-slate-100/80 transition-colors cursor-pointer"
+                aria-label={lang === "ar" ? "قائمة المناطق والخدمات" : "Regions and services menu"}
+              >
                 <span>{lang === "ar" ? "المناطق" : "Regions"}</span>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform" />
               </button>
@@ -125,6 +128,7 @@ export const Navbar = () => {
               onClick={toggleLanguage}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/90 border border-slate-200 text-slate-800 hover:text-cyan-700 hover:bg-slate-200/90 text-xs font-bold transition-all shadow-xs cursor-pointer"
               title={lang === "ar" ? "Switch to English" : "التحويل للغة العربية"}
+              aria-label={lang === "ar" ? "التحويل إلى اللغة الإنجليزية" : "Switch to Arabic language"}
             >
               <Globe className="w-3.5 h-3.5 text-cyan-600" />
               <span>{lang === "ar" ? "English" : "العربية"}</span>
@@ -144,6 +148,7 @@ export const Navbar = () => {
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-1 px-2 py-1.5 sm:px-2.5 sm:py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200/80 text-slate-800 text-xs font-bold cursor-pointer transition-colors shrink-0"
+              aria-label={lang === "ar" ? "التحويل إلى اللغة الإنجليزية" : "Switch to Arabic language"}
             >
               <Globe className="w-3.5 h-3.5 text-cyan-600" />
               <span>{lang === "ar" ? "EN" : "عربي"}</span>
@@ -152,7 +157,7 @@ export const Navbar = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl bg-cyan-600 hover:bg-cyan-700 active:scale-95 text-white shadow-md shadow-cyan-600/30 border border-cyan-500/50 cursor-pointer transition-all shrink-0 flex items-center justify-center"
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? (lang === "ar" ? "إغلاق القائمة" : "Close menu") : (lang === "ar" ? "فتح القائمة الرئيسية" : "Open main menu")}
             >
               {mobileMenuOpen ? <X className="w-5 h-5 stroke-[2.5]" /> : <Menu className="w-5 h-5 stroke-[2.5]" />}
             </button>

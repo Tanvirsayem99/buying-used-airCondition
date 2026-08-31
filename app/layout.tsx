@@ -8,24 +8,36 @@ const tajawal = Tajawal({
   subsets: ["arabic"],
   weight: ["400", "500", "700", "800", "900"],
   variable: "--font-tajawal",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-cairo",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-outfit",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -94,7 +106,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://buyallscrapksa.com/images/scrap-ac.jpg",
+        url: "https://buyallscrapksa.com/images/scrap-ac.webp",
         width: 1200,
         height: 630,
         alt: "شراء مكيفات مستعمل القطيف",
@@ -106,7 +118,7 @@ export const metadata: Metadata = {
     title: "شراء مكيفات مستعمل القطيف | buyallscrapksa.com",
     description:
       "نشتري المكيفات المستعملة وسكراب المعادن والأجهزة بالقطيف بأعلى سعر كاش ونقل مجاني.",
-    images: ["https://buyallscrapksa.com/images/scrap-ac.jpg"],
+    images: ["https://buyallscrapksa.com/images/scrap-ac.webp"],
   },
   robots: {
     index: true,
@@ -137,6 +149,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="vPdN5WTgh2qQ5IVPjTUcg1O9LiipAzYeO2r4Soa2y-M" />
+        <link rel="preload" href="/images/hero-ac.webp" as="image" type="image/webp" fetchPriority="high" />
         <JsonLd data={[localBusinessSchema, webSiteSchema]} />
       </head>
       <body className="min-h-full flex flex-col bg-[#f8fafc] text-slate-900 selection:bg-cyan-600 selection:text-white">
