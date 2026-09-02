@@ -10,75 +10,77 @@ import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/
 import { Armchair, Sparkles, Phone, ShieldCheck, Truck, Banknote, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
-const PAGE_URL = "https://buyallscrapksa.com/%D8%B4%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB-%D9%85%D8%B3%D8%AA%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%AE%D8%A8%D8%B1";
+const PAGE_URL = `https://buyallscrapksa.com${encodeURI("/شراء-الاثاث-مستعمل-الدمام")}`;
 
 export const metadata: Metadata = {
   // Exact-match target keyword now appears in the title, not just a variant of it
-  title: "شراء الاثاث مستعمل الخبر | أفضل مشتري أثاث مستعمل بأعلى سعر كاش",
+  title: "شراء الاثاث مستعمل الدمام | أفضل مشتري أثاث مستعمل بأعلى سعر كاش",
   description:
-    "شراء الاثاث مستعمل الخبر بأعلى سعر وكاش فوري. نشتري غرف النوم، المجالس، الكنب، المطابخ، ومعدات المطاعم والمقاهي بالخبر وجميع أحيائها، مع فك ونقل مجاني بنفس اليوم.",
+    "شراء الاثاث مستعمل الدمام بأعلى سعر وكاش فوري. نشتري غرف النوم، المجالس، الكنب، المطابخ، ومعدات المطاعم والمقاهي بالدمام وجميع أحيائها، مع فك ونقل مجاني بنفس اليوم.",
   keywords: [
-    "شراء الاثاث مستعمل الخبر",
-    "شراء اثاث مستعمل بالخبر",
-    "شراء أثاث مستعمل بالخبر",
-    "مشتري أثاث مستعمل بالخبر",
-    "شراء اثاث مستعمل الخبر",
-    "used furniture buyer Khobar",
-    "sell used furniture Khobar",
+    "شراء الاثاث مستعمل الدمام",
+    "شراء اثاث مستعمل بالدمام",
+    "شراء أثاث مستعمل بالدمام",
+    "مشتري أثاث مستعمل بالدمام",
+    "شراء اثاث مستعمل الدمام",
+    "used furniture buyer Dammam",
+    "sell used furniture Dammam",
   ],
   alternates: {
     canonical: PAGE_URL,
   },
   openGraph: {
-    title: "شراء الاثاث مستعمل الخبر | أفضل تثمين ونقل مجاني كاش",
-    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالخبر والراكة والحزام الذهبي والعزيزية. دفع فوري ونقل مجاني بنفس اليوم.",
+    title: "شراء الاثاث مستعمل الدمام | أفضل تثمين ونقل مجاني كاش",
+    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالدمام وحي الشاطئ والحمراء والفيصلية. دفع فوري ونقل مجاني بنفس اليوم.",
     url: PAGE_URL,
-    // FIXED: was "شراء مكيفات مستعمل القطيف" — wrong city, wrong product,
-    // copy-pasted from another page (same bug as the Dammam page had).
-    siteName: "شراء اثاث مستعمل الخبر - buyallscrapksa.com",
+    // FIXED: this was previously "شراء مكيفات مستعمل القطيف" — wrong city, wrong product,
+    // copy-pasted from another page. This was actively telling Google/social platforms
+    // this page was about AC units in Qatif instead of furniture in Dammam.
+    siteName: "شراء اثاث مستعمل الدمام - buyallscrapksa.com",
     locale: "ar_SA",
     type: "website",
     images: [
       {
-        url: "https://buyallscrapksa.com/og-image-khobar-furniture.jpg",
+        url: "https://buyallscrapksa.com/og-image-dammam-furniture.jpg",
         width: 1200,
         height: 630,
-        alt: "شراء اثاث مستعمل الخبر",
+        alt: "شراء اثاث مستعمل الدمام",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "شراء الاثاث مستعمل الخبر | أفضل تثمين ونقل مجاني كاش",
-    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالخبر. دفع فوري ونقل مجاني.",
+    title: "شراء الاثاث مستعمل الدمام | أفضل تثمين ونقل مجاني كاش",
+    description: "نشتري الأثاث المستعمل والمجالس والمطابخ بأعلى الأسعار بالدمام. دفع فوري ونقل مجاني.",
   },
 };
 
-export default function KhobarArabicFurniturePage() {
+export default function DammamFurniturePage() {
   const serviceSchema = generateServiceSchema({
-    name: "شراء الاثاث مستعمل الخبر",
-    description: "شراء وتثمين كافة قطع الأثاث المستعمل، غرف النوم، المجالس، والمطابخ بأعلى الأسعار بالخبر.",
+    name: "شراء الاثاث مستعمل الدمام",
+    description: "شراء وتثمين كافة قطع الأثاث المستعمل، غرف النوم، المجالس، والمطابخ بأعلى الأسعار بالدمام.",
     serviceType: "Used Furniture Buying Service",
-    url: "/شراء-الاثاث-مستعمل-الخبر",
+    url: "/شراء-الاثاث-مستعمل-الدمام",
   });
 
-  // NEW: BreadcrumbList schema to match the visual breadcrumb (missing before)
+  // NEW: BreadcrumbList schema — you already render a visual breadcrumb,
+  // but had no matching structured data for it (missed rich-snippet opportunity)
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "الرئيسية", url: "/" },
-    { name: "شراء الاثاث مستعمل الخبر", url: "/شراء-الاثاث-مستعمل-الخبر" },
+    { name: "شراء الاثاث مستعمل الدمام", url: "/شراء-الاثاث-مستعمل-الدمام" },
   ]);
 
   const pageFaqs = [
     {
-      question: "ما هي أحياء مدينة الخبر التي تغطونها لمشتري الأثاث؟",
-      answer: "نغطي كافة أحياء الخبر (الحزام الذهبي، الحزام الأخضر، الراكة، الثقبة، العقربية، الجسر، الشاطئ، والعزيزية) في غضون 30-45 دقيقة.",
+      question: "ما هي أحياء مدينة الدمام التي تغطونها لمشتري الأثاث؟",
+      answer: "نغطي كافة أحياء الدمام (حي الشاطئ، الحمراء، الفيصلية، الجلوية، النزهة، الفاخرية، طريف، طيبة، والمنار) في غضون 30-45 دقيقة.",
     },
     {
-      question: "ما هي أنواع الأثاث التي تشترونها بالخبر؟",
+      question: "ما هي أنواع الأثاث التي تشترونها بالدمام؟",
       answer: "نشتري غرف النوم الكاملة، المجالس والكنب، طاولات الطعام، المطابخ الألومنيوم والخشب، ومعدات المطاعم والمقاهي المستعملة.",
     },
     {
-      question: "هل يتم الدفع نقداً كاش قبل الفك والتحميل؟",
+      question: "هل يتم الدفع نقداً كاش قبل الفك والتحميل بالدمام؟",
       answer: "نعم، يتم الدفع نقداً (كاش) فوراً في الموقع قبل البدء في فك وتحميل الأثاث.",
     },
   ];
@@ -89,25 +91,25 @@ export default function KhobarArabicFurniturePage() {
       <Navbar />
 
       <div className="pt-24 sm:pt-28 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ name: "شراء الاثاث مستعمل الخبر", url: "/شراء-الاثاث-مستعمل-الخبر" }]} />
+        <Breadcrumbs items={[{ name: "شراء الاثاث مستعمل الدمام", url: "/شراء-الاثاث-مستعمل-الدمام" }]} />
 
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-950 via-slate-900 to-cyan-950 text-white rounded-3xl p-6 sm:p-12 mb-12 shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl space-y-6 relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-extrabold">
               <Sparkles className="w-4 h-4 text-indigo-300" />
-              <span>مشتري أثاث مستعمل معتمد بالخبر • buyallscrapksa.com</span>
+              <span>مشتري أثاث مستعمل معتمد بالدمام • buyallscrapksa.com</span>
             </div>
-            {/* H1 now contains the exact target phrase "شراء الاثاث مستعمل الخبر" */}
+            {/* H1 now contains the exact target phrase "شراء الاثاث مستعمل الدمام" */}
             <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight">
-              شراء الاثاث مستعمل الخبر بأعلى تقييم كاش
+              شراء الاثاث مستعمل الدمام بأعلى تقييم كاش
             </h1>
             <p className="text-base sm:text-lg text-slate-300 font-medium leading-relaxed">
-              إذا كنت تبحث عن جهة موثوقة لـ <strong>شراء الاثاث مستعمل الخبر</strong> لنقل عفشك أو تجديد أثاث منزلك، فإننا نضمن لك أعلى سعر مجزي مع خدمة فك وتغليف ونقل مباشر مجاني 100%.
+              إذا كنت تبحث عن جهة موثوقة لـ <strong>شراء الاثاث مستعمل الدمام</strong> لنقل عفشك أو تجديد أثاث منزلك، فإننا نضمن لك أعلى سعر مجزي مع خدمة فك وتغليف ونقل مباشر مجاني 100%.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع اثاث مستعمل بالخبر. أرجو التواصل وإرسال التثمين.")}
+                href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع اثاث مستعمل بالدمام. أرجو التواصل وإرسال التثمين.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white font-black text-sm flex items-center gap-2.5 shadow-lg shadow-emerald-700/30 transition-transform hover:scale-105"
@@ -132,14 +134,14 @@ export default function KhobarArabicFurniturePage() {
             <div className="space-y-4">
               {/* Fixed typo: "بأعلى السبل" (nonsensical) -> "بأعلى الأسعار" (highest prices) */}
               <h2 className="text-2xl font-black text-slate-900 border-r-4 border-indigo-600 pr-3">
-                شراء الاثاث مستعمل الخبر بأعلى الأسعار
+                شراء الاثاث مستعمل الدمام بأعلى الأسعار
               </h2>
               <p className="text-slate-600 leading-relaxed font-medium text-sm sm:text-base">
-                نحن متخصصون في <strong>شراء الاثاث مستعمل الخبر</strong> بكافة أشكاله وحالاته. نصل إليك فوراً في الخبر، الراكة، الثقبة، الحزام الذهبي، والعزيزية للمعاينة وإعطاء التقييم العادل والمستحق.
+                نحن متخصصون في <strong>شراء الاثاث مستعمل الدمام</strong> بكافة أشكاله وحالاته. نصل إليك فوراً في الدمام، حي الشاطئ، الحمراء، الفيصلية، والمنار للمعاينة وإعطاء التقييم العادل والمستحق.
               </p>
               {/* NEW paragraph: adds topical depth + more natural keyword variants for the same intent */}
               <p className="text-slate-600 leading-relaxed font-medium text-sm sm:text-base">
-                سواء كنت تبحث عن <strong>مشتري أثاث مستعمل بالخبر</strong> بسبب الانتقال لمنزل جديد، أو تجديد الديكور، أو إغلاق مكتب أو مطعم، فريقنا يعاين القطع في موقعك، يعطيك سعراً عادلاً في نفس اللحظة، ويتكفل بالفك والتحميل والنقل دون أي تكلفة إضافية عليك.
+                سواء كنت تبحث عن <strong>مشتري أثاث مستعمل بالدمام</strong> بسبب الانتقال لمنزل جديد، أو تجديد الديكور، أو إغلاق مكتب أو مطعم، فريقنا يعاين القطع في موقعك، يعطيك سعراً عادلاً في نفس اللحظة، ويتكفل بالفك والتحميل والنقل دون أي تكلفة إضافية عليك.
               </p>
             </div>
 
@@ -148,10 +150,10 @@ export default function KhobarArabicFurniturePage() {
             <div className="space-y-3">
               <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-indigo-600" />
-                نغطي جميع أحياء الخبر
+                نغطي جميع أحياء الدمام
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                الحزام الذهبي، الحزام الأخضر، الراكة، الثقبة، العقربية، الجسر، الشاطئ، والعزيزية — نصلك خلال 30-45 دقيقة فقط.
+                حي الشاطئ، الحمراء، الفيصلية، الجلوية، النزهة، الفاخرية، طريف، طيبة، المنار، وباقي أحياء الدمام — نصلك خلال 30-45 دقيقة فقط.
               </p>
             </div>
 
@@ -192,10 +194,10 @@ export default function KhobarArabicFurniturePage() {
             <div className="bg-gradient-to-b from-indigo-900 to-slate-900 text-white p-6 rounded-3xl space-y-6 shadow-xl border border-indigo-500/30">
               <h3 className="text-xl font-black">أرسل صور أثاثك للتثمين</h3>
               <p className="text-xs text-slate-300 font-medium">
-                تواصل معنا بالواتساب للحصول على تسعيرة فورية لأثاثك المستعمل بالخبر.
+                تواصل معنا بالواتساب للحصول على تسعيرة فورية لأثاثك المستعمل بالدمام.
               </p>
               <a
-                href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع أثاث مستعمل بالخبر.")}
+                href={getWhatsAppUrl(WHATSAPP_NUMBER, "السلام عليكم، أرغب في بيع أثاث مستعمل بالدمام.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-102"

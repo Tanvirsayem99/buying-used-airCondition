@@ -52,6 +52,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+
   metadataBase: new URL("https://buyallscrapksa.com"),
   title: {
     default: "شراء مكيفات مستعمل القطيف | نشتري مكيفات سبليت وشباك وسكراب بأعلى سعر كاش",
@@ -62,7 +63,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
   },
   keywords: [
     // Requested Arabic Keywords
@@ -99,10 +99,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://buyallscrapksa.com",
-    languages: {
-      "ar-SA": "https://buyallscrapksa.com",
-      "en-US": "https://buyallscrapksa.com",
-    },
   },
   verification: {
     google: "vPdN5WTgh2qQ5IVPjTUcg1O9LiipAzYeO2r4Soa2y-M",

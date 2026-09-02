@@ -152,6 +152,9 @@ export const WHATSAPP_NUMBER = "966531487293";
 export const DISPLAY_PHONE = "0531487293";
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61593643395854";
 export const INSTAGRAM_URL = "https://www.instagram.com/buyallscrapksa/";
+export const GOOGLE_MAPS_LOCATION_URL = "https://www.google.com/maps/place/26%C2%B033'12.4%22N+50%C2%B001'18.6%22E/@26.5534337,50.0192707,17z/data=!3m1!4b1!4m4!3m3!8m2!3d26.5534337!4d50.0218456";
+export const MAP_LATITUDE = 26.5534337;
+export const MAP_LONGITUDE = 50.0218456;
 
 /**
  * Robust WhatsApp number formatter ensuring correct international Saudi Arabia (966) format

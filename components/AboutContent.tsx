@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, getWhatsAppUrl } from "@/app/data/content";
+import { PHONE_NUMBER, WHATSAPP_NUMBER, DISPLAY_PHONE, GOOGLE_MAPS_LOCATION_URL, getWhatsAppUrl } from "@/app/data/content";
 import {
   ShieldCheck,
   DollarSign,
@@ -21,6 +21,8 @@ import {
   Building2,
   Users,
   Target,
+  MapPin,
+  Navigation,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
@@ -252,6 +254,102 @@ export const AboutContent = () => {
                 ? "فريق عمل محترم وخبرة طويلة تضمن أمان وتنفيذ سريع داخل منزلك."
                 : "Polite, certified staff guaranteeing complete privacy, house protection, and neat work."}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Physical Location & Interactive Google Map Section (SEO & Trust) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl space-y-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-100/90 text-cyan-900 text-xs font-black">
+                <MapPin className="w-4 h-4 text-cyan-600" />
+                <span>{isAr ? "الموقع الجغرافي المعتمد" : "Verified Physical Location"}</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-black text-slate-900">
+                {isAr ? "مقرنا وموقعنا بالقطيف على الخريطة" : "Our Office Location in Qatif"}
+              </h2>
+              <p className="text-sm text-slate-600 font-medium max-w-xl">
+                {isAr
+                  ? "يمكنكم زيارتنا في مقرنا الرئيسي أو طلب خدمة الفك والتحميل والشراء المباشر عند باب منزلك في كافة أحياء القطيف والشرقية."
+                  : "Visit our office in Qatif or request our team to arrive at your doorstep anywhere in Qatif & Eastern Province within 30 minutes."}
+              </p>
+            </div>
+
+            <a
+              href={GOOGLE_MAPS_LOCATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-cyan-600 hover:bg-cyan-500 text-white font-black text-sm shadow-lg shadow-cyan-600/25 transition-transform hover:scale-105 shrink-0"
+            >
+              <Navigation className="w-4 h-4 text-white" />
+              <span>{isAr ? "افتح الموقع في خرائط Google" : "Open in Google Maps"}</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Embedded Google Map iframe */}
+            <div className="lg:col-span-8 rounded-2xl overflow-hidden border border-slate-200 shadow-md min-h-[320px] sm:min-h-[400px] relative bg-slate-100">
+              <iframe
+                title="Google Maps Location - شراء مكيفات مستعمل القطيف"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3570.627196024921!2d50.0192707!3d26.5534337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDMzJzEyLjQiTiA1MMKwMDEnMTguNiJF!5e0!3m2!1sar!2ssa!4v1700000000000!5m2!1sar!2ssa"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "360px" }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full rounded-2xl"
+              />
+            </div>
+
+            {/* Address Info Box */}
+            <div className="lg:col-span-4 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950 text-white rounded-2xl p-6 sm:p-8 space-y-6 flex flex-col justify-between shadow-xl border border-cyan-500/20">
+              <div className="space-y-4">
+                <h3 className="text-xl font-black flex items-center gap-2 text-cyan-300">
+                  <Building2 className="w-5 h-5 text-cyan-400" />
+                  <span>{isAr ? "تفاصيل العنوان الإحداثي" : "Address Details"}</span>
+                </h3>
+
+                <div className="space-y-3 text-xs sm:text-sm text-slate-300 font-medium">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="block text-white text-xs">{isAr ? "العنوان:" : "Address:"}</strong>
+                      <span>{isAr ? "طريق الملك فيصل، حي المجيدية، القطيف 32631، المملكة العربية السعودية" : "King Faisal Road, Al Majeediah, Qatif 32631, Saudi Arabia"}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Zap className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="block text-white text-xs">{isAr ? "الإحداثيات الجغرافية (SEO):" : "GPS Coordinates:"}</strong>
+                      <span className="font-mono text-emerald-300 text-xs">26.5534° N, 50.0218° E</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="block text-white text-xs">{isAr ? "أوقات العمل:" : "Working Hours:"}</strong>
+                      <span>{isAr ? "24/7 طوال أيام الأسبوع" : "24/7 All Week Long"}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-800 flex flex-col gap-2">
+                <a
+                  href={GOOGLE_MAPS_LOCATION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/40 text-cyan-300 font-black text-xs flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>{isAr ? "عرض الاتجاهات المباشرة" : "Get Driving Directions"}</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

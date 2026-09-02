@@ -22,7 +22,7 @@ export const Footer = () => {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* CTA Banner Above Footer */}
         <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950 p-8 sm:p-12 rounded-3xl mb-16 text-center sm:text-start flex flex-col lg:flex-row items-center justify-between gap-8 border border-cyan-500/30 shadow-2xl shadow-cyan-950/50">
           <div className="space-y-3 max-w-2xl text-white">
@@ -60,7 +60,7 @@ export const Footer = () => {
 
         {/* Footer Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          
+
           {/* Col 1: About */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/buy-furniture-qatif" className="hover:text-cyan-400 transition-colors">
+                <Link href="/buy-used-furniture-qatif" className="hover:text-cyan-400 transition-colors">
                   شراء اثاث مستعمل بالقطيف
                 </Link>
               </li>
@@ -110,30 +110,35 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 3: Regions SEO Links */}
+          {/* Col 3: Regions & Cities SEO Links */}
           <div className="space-y-4">
             <h4 className="text-base font-black text-white border-b border-slate-800 pb-2">
-              مناطق الخدمة المباشرة
+              مناطق التغطية والأثاث
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400 font-medium">
               <li>
-                <Link href="/regions/saihat" className="hover:text-cyan-400 transition-colors">
-                  شراء مكيفات وسكراب بالقطيف وسيهات
+                <Link href="/regions/qatif" className="hover:text-cyan-400 transition-colors">
+                  شراء مكيفات وسكراب بالقطيف
                 </Link>
               </li>
               <li>
-                <Link href="/regions/safwa" className="hover:text-cyan-400 transition-colors">
-                  شراء مكيفات وسكراب في صفوى
+                <Link href="/regions/dammam" className="hover:text-cyan-400 transition-colors">
+                  شراء مكيفات وسكراب بالدمام
                 </Link>
               </li>
               <li>
-                <Link href="/regions/tarout" className="hover:text-cyan-400 transition-colors">
-                  شراء مكيفات وسكراب جزيرة تاروت
+                <Link href="/regions/khobar" className="hover:text-cyan-400 transition-colors">
+                  شراء مكيفات وسكراب بالخبر
                 </Link>
               </li>
               <li>
-                <Link href="/regions/awamiyah" className="hover:text-cyan-400 transition-colors">
-                  شراء مكيفات وسكراب بالعوامية
+                <Link href="/buy-used-furniture-dammam" className="hover:text-cyan-400 transition-colors">
+                  شراء اثاث مستعمل بالدمام
+                </Link>
+              </li>
+              <li>
+                <Link href="/buy-used-furniture-khobar" className="hover:text-cyan-400 transition-colors">
+                  شراء اثاث مستعمل بالخبر
                 </Link>
               </li>
             </ul>
@@ -161,7 +166,7 @@ export const Footer = () => {
                 <Clock className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>خدمة 24/7 طوال الأسبوع</span>
               </div>
-              
+
               {/* Social Media Links */}
               <div className="pt-2 flex items-center gap-3">
                 <a
@@ -190,12 +195,6 @@ export const Footer = () => {
 
         </div>
 
-        {/* Keywords SEO Footer Tag Cloud */}
-        <div className="pt-6 border-t border-slate-800/80 mb-6">
-          <p className="text-[11px] text-slate-400 font-medium leading-relaxed">
-            <strong>الكلمات المفتاحية الأكثر بحثاً:</strong> شراء سكراب بالقطيف | شراء مكيفات مستعملة بالقطيف | شراء مكيفات سكراب بالقطيف | شراء اثاث مستعمل بالقطيف | شراء أجهزة مستعملة بالقطيف | شراء خردة بالقطيف | بيع سكراب بالقطيف | شراء الأجهزة الكهربائية المستعملة بالقطيف | شراء مكيفات قديمة بالقطيف | شراء مكيفات خربانة بالقطيف | شراء أثاث مستعمل | شراء أجهزة منزلية مستعملة | مشتري سكراب بالقطيف | مشتري مكيفات مستعملة بالقطيف | مشتري أثاث مستعمل بالقطيف | buy used air conditioners Qatif | used AC buyer Qatif | sell used AC Qatif | used air conditioner buyer Saudi Arabia | scrap buyer Qatif | scrap buyer Saudi Arabia | used furniture buyer Qatif | used appliances buyer Qatif | sell used furniture Qatif | sell used appliances Qatif | buy old air conditioners Qatif | AC scrap buyer Qatif | used home appliances buyer Qatif
-          </p>
-        </div>
 
         {/* Bottom Copyright Bar */}
         <div className="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-400 font-medium">

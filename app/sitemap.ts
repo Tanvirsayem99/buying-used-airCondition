@@ -7,19 +7,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/buy-used-ac-qatif",
     "/buy-scrap-qatif",
-    "/buy-furniture-qatif",
+    "/buy-used-furniture-qatif",
     "/buy-appliances-qatif",
+    "/buy-used-furniture-dammam",
+    "/buy-used-furniture-khobar",
     "/regions/qatif",
     "/regions/dammam",
     "/regions/khobar",
     "/blog",
     "/about",
-    "/شراء-اثاث-مستعمل-الخبر",
-    "/شراء-اثاث-مستعمل-الدمام",
-    "/شراء-اثاث-مستعمل-القطيف",
-    "/مشتري-مكيفات-مستعملة",
-    "/شراء-خردة-القطيف",
-    "/شراء-أجهزة-القطيف",
   ];
 
   return routes.map((route) => {

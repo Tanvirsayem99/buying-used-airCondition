@@ -25,15 +25,15 @@ export const Navbar = () => {
   const navItems = [
     { href: "/", label: lang === "ar" ? "الرئيسية" : "Home" },
     {
-      href: "/مشتري-مكيفات-مستعملة",
+      href: "/buy-used-ac-qatif",
       label: lang === "ar" ? "شراء مكيفات مستعملة" : "Used AC Buyer",
     },
     {
-      href: "/شراء-خردة-القطيف",
+      href: "/buy-scrap-qatif",
       label: lang === "ar" ? "شراء سكراب" : "Scrap Buyer",
     },
     {
-      href: "/شراء-أجهزة-القطيف",
+      href: "/buy-appliances-qatif",
       label: lang === "ar" ? "شراء أجهزة مستعملة" : "Used Appliances",
     },
     { href: "/blog", label: lang === "ar" ? "المدونة" : "Blog" },
@@ -41,9 +41,9 @@ export const Navbar = () => {
   ];
 
   const regionLinks = [
-    { href: "/شراء-اثاث-مستعمل-القطيف", label: lang === "ar" ? "شراء الاثاث مستعمل القطيف" : "Buy used furniture in Qatif" },
-    { href: "/شراء-اثاث-مستعمل-الدمام", label: lang === "ar" ? "شراء الاثاث مستعمل الدمام" : "Buy used furniture in Dammam" },
-    { href: "/شراء-اثاث-مستعمل-الخبر", label: lang === "ar" ? "شراء الاثاث مستعمل الخبر" : "Buy used furniture in Khobar" },
+    { href: "/buy-used-furniture-qatif", label: lang === "ar" ? "شراء الاثاث مستعمل القطيف" : "Buy used furniture in Qatif" },
+    { href: "/buy-used-furniture-dammam", label: lang === "ar" ? "شراء الاثاث مستعمل الدمام" : "Buy used furniture in Dammam" },
+    { href: "/buy-used-furniture-khobar", label: lang === "ar" ? "شراء الاثاث مستعمل الخبر" : "Buy used furniture in Khobar" },
   ];
 
   return (

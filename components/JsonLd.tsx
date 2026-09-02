@@ -33,9 +33,10 @@ export const generateLocalBusinessSchema = () => ({
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 26.5196,
-    longitude: 50.0116,
+    latitude: 26.5534337,
+    longitude: 50.0218456,
   },
+  hasMap: "https://www.google.com/maps/place/26%C2%B033'12.4%22N+50%C2%B001'18.6%22E/@26.5534337,50.0192707,17z/data=!3m1!4b1!4m4!3m3!8m2!3d26.5534337!4d50.0218456",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
